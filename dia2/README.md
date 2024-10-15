@@ -5,11 +5,13 @@ GithubDesktop
 VisualStudio
 
 
-
 Soy un ejemplo de código HTML
 
 ```html
 <p> Soy un párrafo </p>
+<img src= "img/gatito.webp">
+<img title = "imagen" src="https://misfotos.com/foto1.png">
+
 ```
 
 Soy un ejemplo de código css
@@ -24,3 +26,4 @@ Soy un ejemplo de código JS
 ```js
 alert("Bienvenidos a mi web");
 ```
+
