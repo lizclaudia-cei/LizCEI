@@ -1,27 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Pruebitas</title>
-</head>
-
-<body>
-    <p title="primer parrafo"> Hola soy un párrafo web </p>
-    <img  class = "felino" src="img/gatitoNotFound.webp" id="zebra" title="imagen de gatitos" alt="Foto de gato Messi alternativo">
-    <img class = "felino" src="img/gatito.webp" id="coco" title="imagen de gatitos">
-    <img class = "felino" src="img/gatito.webp" id="tom" title="imagen de gatitos">
-    <img class = "felino" src="img/gatito.webp" id="garfield" title="imagen de gatitos">
-    <img class = "felino" src="data:image/webp;base64,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" title="imagen de gatitos de internet">
-    
     <style>
-        .felino{
-            width: 200px;
-            height: 200px;
-        }
-        
+      .felino{
+          width: 200px;
+          height: 200px;
+      }
     </style>
-</body>
+  </head>
 
+  <body>
+    <p title="primer parrafo">Hola soy un párrafo web</p>
+    <img
+      class="felino"
+      src="img/gatitoNotFound.webp"
+      id="zebra"
+      alt="Foto de gato Messi alternativo"
+    />
+    <img
+      class="felino"
+      src="img/gatito.webp"
+      id="coco"
+      alt="imagen de gatitos"
+    />
+    <img
+      class="felino"
+      src="img/gatito.webp"
+      id="tom"
+      alt="imagen de gatitos"
+    />
+    <img
+      class="felino"
+      src="img/gatito.webp"
+      id="garfield"
+      alt="imagen de gatitos"
+    />
+    <img
+      class="felino"
+      src="data:image/webp;base64,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"
+      alt="imagen de gatitos de internet"
+    />
+  </body>
 </html>
