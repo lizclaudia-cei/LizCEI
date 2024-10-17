@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <meta
+      name="description"
+      content="Esta página es nuestra segunda página realizada en el Módulo de DW"
+    />
+    <meta name="keywords" content=" Diseño Web, CEI, Página, CSS, JS" />
+    <meta name="author" content="Alumnos de DW v3" />
+    <style>
+        * {
+            box-sizing:border-box;
+        }
+      table {
+        border: 1;
+        border-collapse: collapse;
+      }
+
+      table,
+      th,
+      td {
+        border: 1px solid #ddd;
+      }
+      th,
+      td {
+        padding: 12px;
+        text-align: center;
+      }
+      .box{
+        width: 200px;
+        height: 200px;
+        margin: 10px;
+        /* border-color: black;
+        border-style:dashed; */
+        border-width: 2px;
+        border: 2px solid black;
+        padding: 20px;
+       
+      }
+
+      span {
+        background-color: violet;
+      }
+      div {
+        background-color: plum;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Tabla</h1>
+    <table>
+      <thead>
+        <th>Nombre</th>
+        <th>Raza</th>
+        <th>Color</th>
+        <th>Actividades</th>
+      </thead>
+      <tbody>
+        <tr>
+          <th>Garfield</th>
+          <td rowspan="3">Gato</td>
+          <td>Naranja</td>
+          <td>Comer</td>
+        </tr>
+        <tr>
+          <th>Felix</th>
+          <td colspan="2">Negro</td>
+        </tr>
+        <tr>
+          <th>Rayo</th>
+          <td>Amarillo</td>
+          <td>Jugar</td>
+        </tr>
+      </tbody>
+    </table>
+    <h3>Inline Vs Block</h3>
+
+    <span class="box"> Caja 1</span>
+    <span class="box">caja 2</span>
+    <div class="box">Caja 3</div>
+    <div class="box">Caja 4</div>
+  </body>
+</html>
