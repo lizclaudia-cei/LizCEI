@@ -68,7 +68,7 @@ El box model es la forma en que se estructura un elemento HTML.Cada elemento tie
 - El border: es el borde del elemento.
 - El padding: es el espacio entre el contenido y el borde.
 - El content: es el contenido de nuestra caja.
-- el box-sizing : Hace que los elementos de la página tengan la medida que se le otorga con el width y el hight y hace que el contenido sea mas pequeño.
+- el box-sizing : Hace que los elementos de la página tengan la medida que se le otorga con el width y el hight incluyendo los margins y hace que el contenido sea mas pequeño.
 
 ```css
 .caja{

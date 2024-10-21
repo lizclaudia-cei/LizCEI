@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Apuntes 5</title>
+    <meta name="authors" content="Alumnos Dw v3" />
+    <meta
+      name="description"
+      content="Está pagina es la pagína # 4 creada en la clase para conocer etiquetas html"
+    />
+    <meta name="keywords" content="Diseño Web, CEI,Página, CSS, JS" />
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+
+      .box {
+        width: 100px;
+        height: 100px;
+
+        border: 2px solid black;
+        background-color: #eb9d37;
+        padding: 5px;
+        margin: 10px;
+        box-shadow: inset 10px 10px 10px rgb(253, 200, 102);
+        border-radius: 255px 15px 225px 15px / 15px 225px 15px 225px;
+        filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.5));
+      }
+      .purpleBox{
+        border: 2px solid black;
+        background-color: #c473cf;
+        padding: 5px;
+        margin: 10px;
+        box-shadow: inset 10px 10px 10px rgb(210, 174, 234);
+        border-radius: 255px 15px 225px 15px / 15px 225px 15px 225px;
+        filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.5));
+      }
+
+      .growBox{
+        flex-grow: 1;
+        border: 2px solid black;
+        background-color: #c473cf;
+        padding: 5px;
+        margin: 10px;
+        box-shadow: inset 10px 10px 10px rgb(210, 174, 234);
+        border-radius: 255px 15px 225px 15px / 15px 225px 15px 225px;
+        filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.5));
+      }
+
+
+      #box1{
+        width: 200px;
+        height: 200px;
+      }
+      .boxDouble{
+        width: 200px;
+      }
+
+      .flex{
+        display: flex;
+        gap: 4px;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items:baseline;
+      }
+
+      
+
+      .inline {
+        display: inline;
+      }
+
+      .block {
+        display: block;
+      }
+
+      .inline-block {
+        display: inline-block;
+      }
+
+      .hidden {
+        display: none;
+      }
+     
+    </style>
+  </head>
+  <body>
+    <h1>Display</h1>
+
+    <h2>Display Inline</h2>
+
+    <div class="">
+      Ejemplo inline
+      <span class="box inline"> Caja 1</span>
+      y
+      <span class="box inline">Caja 2</span>
+      . Estos elementos no tienen height o width, tampoco puedo aplicar
+      top/bottom margin.
+    </div>
+
+    <div class="">
+      <h2>Display Block</h2>
+      Ej block:
+      <span class="box block"> Caja 1 </span>
+      <span class="box block"> Caja 2 </span>
+    </div>
+
+    <div class="">
+      <h2>Display inline-block</h2>
+      Ejemplo inline block
+      <span class="box inline-block" id="box1"> Caja 1 Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque laborum vel voluptatem ratione inventore minima, placeat ipsa obcaecati ipsum aliquid veniam iure impedit aliquam expedita at ea consequatur, harum cupiditate!snewdiwhedhwiedweidwo </span>
+      <span class="box inline-block"> Caja 2 </span>
+      <br />
+      El inline block se comporta como Block pero sin agregar el break line al
+      final.
+    </div>
+
+    <h2>Display none</h2>
+    <div class="">
+       La caja 2 no debería de verse
+      <span class="box inline inline-block">Caja 1</span>
+      <span class="box inline inline-block ">Caja 2 </span>
+      <span class="box inline-block">Caja 3</span>
+    </div>
+
+    <h2>Display flex</h2>
+    <div class="flex purpleBox">
+        <div class="box">1</div>
+        <div class="box boxDouble">2</div>
+        <div class="box"> Pruebitas sss lorem</div>
+        <div class="growBox">4</div>
+        <div class="growBox">5</div>
+        <div class="growBox">6</div>
+    </div>
+  </body>
+</html>
