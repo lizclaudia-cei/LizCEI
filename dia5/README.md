@@ -49,7 +49,7 @@ Al colocar un display none lo que hace es que esconde la caja a la que se le apl
 ```
 
 Display flex 
-Flex posibilita decirle al padre como sus hijos se van a comportar. Por lo que las reglas solo se le colocan al padre aunque se las aplique a todos los elementos.
+Flex posibilita decirle al padre como sus hijos se van a comportar. Por lo que las reglas solo se le colocan al padre aunque se las aplique a todos los elementos  que esten dentro del padre.
 ```css
 .flex{
   display:flex;

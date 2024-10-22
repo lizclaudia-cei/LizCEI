@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Practica 1</title>
+    <meta name="description" content="Practica de unión de los dos layouts" />
+    <meta name="author" content="Liz Claudia Espinosa" />
+    <meta name="keywords" content="CEI, Diseño Web, HTML, CSS, JS" />
+
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      .container {
+        display: flex;
+        flex-direction: column;
+        height: 100vh;
+      }
+      .header {
+        display: flex;
+        flex-direction: row;
+        padding: 10px;
+        background-color: black;
+        color: white;
+        justify-content: space-between;
+      }
+      .contenidoHeader a {
+        color: white;
+        text-decoration: none;
+        padding: 10px;
+      }
+
+      .content {
+        display: flex;
+        flex: 1;
+      }
+      .sideBar {
+        background-color: lightgoldenrodyellow;
+        padding: 10px;
+        width: 300px;
+      }
+      .mainContent {
+        padding: 10px;
+        flex: 1;
+      }
+      ul {
+        list-style: none;
+      }
+      .footer {
+        display: flex;
+        flex-direction: row;
+        background-color: black;
+        color: white;
+        padding: 10px;
+        justify-content: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">
+        <div class="logo">
+          <p>Logo</p>
+        </div>
+        <div class="contenidoHeader">
+          <a href="./index.html">Inicio</a>
+          <a href="./index.html">Acerca de</a>
+          <a href="./index.html"> Servicios</a>
+          <a href="./index.html">Contacto</a>
+        </div>
+      </div>
+      <div class="content">
+        <div class="sideBar">
+          <h1>Barra Lateral</h1>
+          <ul>
+            <li><a href="">Enlace 1</a></li>
+            <li><a href="">Enlace 2</a></li>
+            <li><a href="">Enlace 3</a></li>
+          </ul>
+        </div>
+        <div class="mainContent">
+          <h1>Contenido principal</h1>
+          <p>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ducimus eum necessitatibus quasi eligendi amet odit, sequi cumque excepturi asperiores quos in omnis recusandae veniam delectus veritatis, reprehenderit, iure ut error.
+            Eos non, sed voluptate ad dolores et sequi aliquid. Doloremque officia repellendus molestiae natus ullam pariatur, ipsum quas suscipit explicabo excepturi delectus unde, accusamus mollitia, sit dignissimos ad. Hic, quaerat.
+            Dolorem sunt enim cumque tenetur, porro quasi quisquam quam labore voluptas voluptatum velit consectetur, nam cum officiis magni libero. Ut sunt veritatis molestiae voluptate reiciendis dolore dolorem fuga explicabo similique?
+            Quibusdam alias odio assumenda saepe ipsa, facilis, sint vel maiores dolore voluptatum fugit quia ipsum provident quos ullam eaque quasi! Vero dicta aspernatur necessitatibus, similique labore itaque incidunt facere vel.
+            Sunt ducimus, repellendus voluptatibus laboriosam labore nulla! Nisi consectetur saepe, voluptatibus inventore ea fugit ad in expedita corporis minima? Nemo voluptatem mollitia aliquid tempore totam dignissimos non quam perferendis rem!
+            Doloribus ea velit quas maxime excepturi, vel dicta dolore vitae cumque, in consequatur, nostrum qui quos rem repellat culpa nobis maiores dolor aliquam. Repellat deserunt dolorum, tempore nesciunt facere vero.
+            Modi minima cum quaerat laudantium. Mollitia quo accusantium impedit perferendis sint ad delectus rerum, voluptas, fugiat corrupti quia non recusandae. Eos minus soluta sint enim exercitationem ullam saepe quos similique?
+            Quas saepe quis ratione rem tenetur minus quod aliquid quibusdam maiores placeat numquam qui harum inventore, in eum, et quisquam. Dolore laboriosam nisi, blanditiis quia laudantium beatae. Suscipit, neque autem.
+            Quidem soluta delectus nesciunt? Magni possimus quas amet nihil quaerat sint harum blanditiis temporibus consequatur, ea nobis, doloremque sit. Quisquam maiores molestias officiis distinctio! Similique aliquid eaque eligendi autem velit.
+            Tempora ex debitis porro quam, voluptas reprehenderit quaerat beatae aliquid minima asperiores corporis neque placeat facere officia animi quod labore exercitationem distinctio? Ex eos praesentium, veniam quae adipisci quisquam autem.
+         </p>
+        </div>
+      </div>
+      <div class="footer">
+        <p>Derechos de autor © 2024 Nombre de la empresa</p>
+      </div>
+    </div>
+  </body>
+</html>

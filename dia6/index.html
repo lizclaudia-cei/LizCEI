@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Apuntes 6</title>
+    <meta name="author" content="Liz Claudia Espinosa" />
+    <meta name="description"
+      content="Está pagina es la pagína # 5 creada en la clase para conocer etiquetas html" />
+    <meta name="keywords" content="Diseño Web, HTML, CSS, JS, CEI " />
+    <style>
+        /* RESET CSS */
+      * {
+        box-sizing: border-box;
+        margin:0;
+        padding:0;
+      }
+      h1{
+        padding: 20px;
+      }
+      h2{
+        padding: 5px;
+      }
+    .container{
+        display: flex;
+        }
+    #sidebarLayoutHorizontal{
+        background-color: bisque;
+        padding: 20px;
+        width: 200px;
+    }
+    #contentLayoutHorizontal{
+        padding: 20px;
+        flex:1;
+        align-content: center;
+    }
+
+    #listLayoutHorizontal{
+        list-style: none;
+    }
+    #listLayoutHorizontal a{
+        text-decoration: none;
+        color:black;
+    }
+
+
+    #layoutVertical{
+        flex-direction: column;
+        height:100vh;
+       
+    }
+    .header, .footer{
+        background-color: lightcyan;
+        padding: 10px;
+    }
+    .content{
+        flex:1;
+        background-color: bisque;
+        padding: 10px;
+        overflow-y: scroll;
+    }
+    
+    </style>
+  </head>
+  <body>
+    <h1> Flex Layout</h1>
+    <h2>Layout horizontal</h2>
+    <div class="container">
+        <div id="sidebarLayoutHorizontal">
+            <ul id="listLayoutHorizontal">
+                <li>Elemento 1</li>
+                <li>Elemento 2</li>
+                <li>Elemento 3</li>
+                <li> <a href="./index.html">Home</a></li>
+            </ul>
+            ver mas en <a href="">W3School</a>
+        </div>
+        <div id="contentLayoutHorizontal">
+            <h1>Contenido Principal</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam voluptatum, laborum qui quidem similique molestiae dignissimos ut cupiditate et tempora accusamus sunt quis odit provident! Esse quas mollitia officiis qui.
+            Repellendus quidem voluptatibus beatae ducimus quibusdam ullam ex, dicta voluptates. Fuga nobis veniam autem in dolorem, quasi quo delectus debitis aut dicta repudiandae voluptatibus facilis ipsum architecto inventore, praesentium aspernatur.</p>
+        </div>
+    </div>
+
+    <h2>Layout vertical</h2>
+    <div class="container" id="layoutVertical">
+        <div class="header">
+            <p>Header</p>
+        </div>
+        <div class="content">
+            <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non nemo minima error ipsa quam perspiciatis corporis blanditiis ipsum quo eveniet aliquid aliquam deserunt quaerat minus autem eius, rerum pariatur. Voluptatem.
+            Saepe laborum unde assumenda rerum ducimus cumque exercitationem, obcaecati, aut dicta atque corporis incidunt fuga quisquam iusto, veniam libero necessitatibus qui inventore in neque expedita. Aut soluta necessitatibus nobis odit?
+            Sequi explicabo fuga nobis facilis nihil quasi quam possimus molestiae accusantium eaque tenetur, suscipit cum eum inventore dolorum dignissimos. Corporis ratione officia incidunt perspiciatis quia quod beatae illo inventore cupiditate?
+            Esse animi aliquam, sapiente odio iusto incidunt accusamus neque ducimus veritatis fuga eaque omnis deserunt tempore? Possimus dolore sint, optio libero, veniam qui voluptas assumenda est molestiae quasi repudiandae dolores?
+            Eius nobis amet laudantium, necessitatibus voluptas quod incidunt accusantium sint reprehenderit sequi a possimus temporibus sapiente excepturi laboriosam ut quis nesciunt deleniti fuga non ea quae totam numquam iure. Perspiciatis.
+            Repellat saepe exercitationem officia facere voluptatum, necessitatibus vero placeat incidunt consectetur molestias ducimus amet magni tempore tempora. Explicabo neque facere sunt sequi reprehenderit fugit nostrum? Voluptatibus ipsam corporis maxime quaerat.
+            Quos laudantium, nulla, voluptatum magni, iure modi deserunt perspiciatis corrupti consequuntur quasi eveniet exercitationem animi et doloremque explicabo dolore. Alias nihil laborum voluptatum nulla, optio tempore. Ea praesentium nam facilis.
+            Nostrum architecto, odit beatae accusamus blanditiis natus error iusto ullam! Ex dolorum dolores iure vero mollitia quasi qui velit, iusto, a eius fuga alias et iste vel, impedit vitae veritatis.
+            Perspiciatis consequuntur aliquam cum doloremque laudantium officiis dolorum, distinctio mollitia ut aperiam. Voluptatem animi dolorum maxime minima numquam doloribus quae consequuntur ullam aperiam accusamus corrupti, quo et iste quibusdam id!
+            Asperiores praesentium corporis quis amet incidunt dolorum? Ex, velit rem nulla voluptates deleniti pariatur. Ipsam itaque quisquam voluptas corrupti, sed dolores repellat cupiditate cumque assumenda, vero quia atque pariatur officia?
+            Vero asperiores eaque repellat numquam aspernatur nisi laboriosam expedita tenetur inventore nam amet facilis laborum, minus consequatur delectus nesciunt ab, omnis ad consequuntur cupiditate veniam quam, mollitia nihil cumque. Eius!
+            Facere, possimus rem. Magni cumque reiciendis eaque, obcaecati eum, unde saepe et, sunt eveniet vero asperiores rem. Iusto quaerat voluptas ullam. Magni esse possimus iure reiciendis, fuga aut eum reprehenderit.
+            In aspernatur, officiis ab veritatis voluptatibus praesentium nihil et asperiores, harum, quisquam inventore omnis quasi excepturi. Veritatis voluptatem autem rerum consectetur iure, error earum, iusto repellendus, quam blanditiis minus architecto.
+            Dolorum porro quae blanditiis, eligendi ut sit quidem perferendis animi veniam repudiandae incidunt. Molestiae amet quis quas facere. Suscipit rem iure repellat porro sequi quaerat ab rerum maxime, ipsa obcaecati.
+            Ipsum in quas labore, sapiente quidem quis odio nobis ut quam praesentium excepturi alias autem dicta similique optio sit repellendus quod! Facilis, dignissimos quas. Et, quo veniam. Ipsam, aperiam vero.
+            Maiores totam a commodi illo, quaerat provident ad quisquam quia velit temporibus illum odio rem quibusdam obcaecati exercitationem, autem consequuntur ea ducimus ullam sapiente voluptatum. Facilis dicta dolore enim. Ad.
+            Numquam consequatur deleniti eos ratione odio eum reprehenderit porro reiciendis aliquam quae deserunt corrupti, saepe quas adipisci minus veritatis dolorem ut laboriosam impedit est quam, quibusdam asperiores, veniam dolor! Aperiam?
+            Natus beatae laudantium nulla, eos non molestias expedita! Nisi magni doloribus optio doloremque dolor, provident rerum unde sapiente, inventore quas sit hic, corrupti praesentium beatae in vero et? Commodi, molestiae.
+            Ullam, ad doloribus maiores harum cupiditate eos. Aliquid magni nemo omnis porro culpa ad hic aspernatur atque fugiat libero eaque, delectus possimus inventore odio accusamus maxime reiciendis, sequi iure minima?
+            Dolores, quo? Ratione asperiores fugiat perferendis optio labore saepe, accusantium suscipit, vitae unde ut quibusdam, facere possimus assumenda quaerat. Deserunt eveniet corrupti voluptate adipisci eum facere alias consequatur odio provident. </p>
+        </div>
+        <div class="footer">
+            Footer
+        </div>
+    </div>
+  </body>
+</html>
