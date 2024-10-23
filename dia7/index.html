@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apuntes día 7</title>
+    <meta name="author" content="Liz Claudia Espinosa">
+    <meta name="description" content="Esta página es la número 6 creada en clase para aprender etiquetas html">
+    <meta name="keywords" content="CEI, Diseño Web, HTML,CSS,Js">
+    <style>
+        *{
+            box-sizing: border-box;
+            margin:0;
+            padding:0;
+        }
+
+        .gridContainer{
+            display:flex;
+            flex-wrap: wrap;
+            gap:20px;
+        }
+
+        .card{
+        border: 2px solid black;
+        background-color:lightgrey;
+        padding: 20px;
+        border-radius: 255px 15px 225px 15px / 15px 225px 15px 225px; 
+         flex: 1 0 200px 
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Flex Layout</h1>
+    <br/>
+    <h2>Layout Cuadricula</h2>
+    <div class="gridContainer">
+        <div class="card">Tarjeta 1 </div>
+        <div class="card">Tarjeta 2 </div>
+        <div class="card">Tarjeta 3 </div>
+        <div class="card">Tarjeta 4 </div>
+        <div class="card">Tarjeta 5 </div>
+        <div class="card">Tarjeta 6 </div>
+    </div>
+</body>
+</html>
