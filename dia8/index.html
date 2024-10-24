@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <meta
+      name="description"
+      content="Esto es una página creada en clase para practicar las etiquetas html "
+    />
+    <meta name="keywords" content="Diseño Web, CEI, HTML,CSS, JS" />
+    <meta name="authors" content="Liz Claudia Espinosa" />
+    <style>
+               *{
+                  box-sizing: border-box;
+                  margin:0;
+                  padding:0;
+              }
+              .cards{
+                      display: flex;
+                      flex-wrap: wrap;
+                      align-items: stretch;
+              }
+              .card{
+                flex: 0 0 200px;
+                margin: 10px;
+                border: 10px solid #ccc;
+                box-shadow: 2px 2px 6px 0px rgba(0, 0, 0, 0.3);
+              }
+              .card img{
+                max-width: 100%;
+              }
+              .card .text{
+                padding: 0 20px 20 px;
+              }
+
+              .card button{
+                background: grey;
+                border: 0;
+                color: wheat;
+                width: 100%;
+                padding: 10px
+              }
+              .navbar{
+
+
+              }
+              .menu{
+                display: flex;
+                list-style-type: none;
+              }
+            
+              .dropdown{
+                position: relative;
+              }
+              .dropdown-menu{
+                list-style: none;
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                background-color: red;
+                padding: 10px;
+                width: 150px;
+              }
+              .dropdown:hover .dropdown-menu{
+                display: block;
+              }
+              .dropdown-menu.right{
+                left: auto;
+                right: 0;
+              }
+             
+              
+    </style>
+  </head>
+  <body>
+    <div class="navbar">
+        <div class="logo">
+        </div>
+        <ul class="menu">
+<li><a href="#">Inicio</a></li>
+<li><a href="">Acerca de</a></li>
+<li class="dropdown">
+    <a href="">Servicios</a>
+    <ul class="dropdown-menu">
+        <li>pruebas</li>
+        <li></li>
+    </ul>
+
+</li>
+        </ul>
+    </div>
+    <div class="cards">
+      <div class="card">
+        <img src="../dia2/img/gatito.webp" alt="" />
+        <div class="text">
+          <h3>Seamlessly visualize quality</h3>
+          <p class="text">
+            Collaboratively Administrate empowered markets via plug and play
+            networks
+          </p>
+          <button>VER MAS</button>
+        </div>
+      </div>
+      <div class="card"></div>
+      <div class="card"></div>
+      <div class="card"></div>
+      <div class="card"></div>
+      <div class="card"></div>
+    </div>
+  </body>
+</html>

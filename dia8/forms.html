@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Formulario de login</title>
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 5px;
+      }
+
+      input {
+        display: block;
+        margin: 10px;
+      }
+      .gender {
+        display: flex;
+      }
+      .decsription {
+        display: flex;
+        flex-direction: column;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Login de usuarios</h1>
+
+    <form action="./forms.html" method="GET">
+      <label for="user">Usuario</label>
+      <input type="text" id="user" name="user" required />
+
+      <label for="pass">Clave</label>
+      <input type="password" id="pass" name="pass" required />
+
+      <input type="submit" value="Ingresar al portal" />
+    </form>
+
+    <h1>Registro de usuarios</h1>
+    <form action="./forms.html" method="POST">
+      <fieldset>
+        <legend>Información Básica</legend>
+
+        <label for="name">Nombre</label>
+        <input type="text" id="nombre" name="name" required />
+
+        <labe for="email">Email</labe>
+        <input type="email" id="email" name="email" />
+
+        <labe for="pass">Password</labe>
+        <input type="text" id="pass" name="pass" />
+
+        <labe for="confirm-pass">Confirmar Password</labe>
+        <input type="password" id="confirm-pass" name="confirm-pass" />
+
+        <label for="age">Edad</label>
+        <input placeholder="Ingresa una edad" type="number" id="age" name="age" />
+
+        <label for="gender">Genero</label>
+
+        <div class="gender">
+          <label><input type="radio" id="men" name="gender" value="men"/>Hombre</label>
+          <label><input type="radio" id="female" name="gender" value="female"/>Mujer</label>
+        </div>
+
+        <div class="decsription">
+          <label for="desc">Descripción</label>
+          <textarea id="desc" name="desc" cols="30" rows="10">Descripcion</textarea>
+        </div>
+        
+        <input type="submit" value="Resgitrarse" />
+      </fieldset>
+    </form>
+  </body>
+</html>
