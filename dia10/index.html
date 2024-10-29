@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apuntes 10</title>
+    <meta name="description" content="Página creada en clase para comprender temas">
+    <meta name="author" content="Liz Claudia Espinosa Gutierrez">
+    <meta name="keywords" content="CEI, Diseño Web, HTML, CSS, JS">
+
+    <style>
+       *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .container{
+            display: flex;
+            flex-direction: row;
+            padding: 10px;
+            align-items: stretch;
+            
+        }
+        .box{
+            display: flex;
+            flex-direction: column;
+            border:1px solid black;
+       
+            width: 250px;
+            margin: 10px;
+       
+        }
+
+        .header{
+            border:1px solid black;
+        }
+        .content{
+            border:1px solid black;
+            display: flex;
+            flex-direction: column;
+            flex:1;
+            
+        }
+         
+        .footer{
+            border:1px solid black;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box">
+            <div class="header">
+             Este es el header 
+            </div>
+            <div class="content">
+              <p>  Este es mi contenido que puede variar su tamaño</p>
+                <br>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum, dignissimos rem cupiditate aliquam magnam excepturi quidem, illo ut aperiam ea, assumenda beatae tempora ex tenetur! Magni illum laborum autem iusto.</p>
+                <br>
+                <p class="overflow">Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis nostrum fuga in exercitationem excepturi eos ducimus cumque officia, sed voluptas architecto odio, quae vitae, quibusdam perferendis inventore numquam asperiores magni!</p>
+            </div>
+            <div class="footer">
+                Este es el footer
+            </div>
+        </div>
+        <div class="box">
+            <div class="header">
+             Este es el header 
+            </div>
+            <div class="content">
+                Este es mi contenido 
+            </div>
+            <div class="footer">
+                Este es el footer
+            </div>
+        </div>
+    </div>
+</body>
+</html>
