@@ -13,7 +13,7 @@ Los links tambien posibilitan moverte dentro de la misma web para ello se le ind
 
 - fixed: Posicionar un elemento en la pantalla cuestion que siempre este visible. No ocupa espacio y se posiciona respecto al navegador.
 
-- Sticky: es un relative mientras esta en pantalla pero cuando scroleas y te vas se convierte en un fix.
+- Sticky: es un relative mientras esta en pantalla pero cuando scroleas y te vas se convierte en un fix.Es obligatorio colocar la propiedad top o left dependiendo de donde se desea colocar el sticky.
 
 Nota Si deseas agregar transparencia aun objeto se grega la propiedad opacity = 0,5.
 

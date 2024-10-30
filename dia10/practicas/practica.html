@@ -4,7 +4,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Practica con stilos</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css"
+    />
 
     <style>
       * {
@@ -14,10 +17,11 @@
       }
       .container {
         background-color: grey;
-        padding: 20px;
+        gap: 20px;
+        padding: 10px;
         display: flex;
         flex-direction: column;
-        height: 100vh;
+        /* height: 100vh; */
       }
       .item {
         background-color: #1eaafc;
@@ -41,6 +45,8 @@
 
       .header {
         position: sticky;
+        top: 0px;
+
       }
       .header,
       .footer {
@@ -50,19 +56,30 @@
       }
       .content {
         display: flex;
-        flex: 1;
+        flex-grow: 1;
+        width: 100%;
+        gap: 20px;
         align-items: stretch;
       }
       .sidebar {
         margin: 10px 0px;
-        width: 20%;
+        width: 200px;
         background-image: linear-gradient(203deg, #3edfd7 0%, #29a49d 90%);
       }
       .mainContent {
-        width: 70%;
         display: flex;
         flex-direction: column;
-        flex: 1;
+        flex-grow: 1;
+        gap: 20px;
+      }
+      .mainContent .item{
+        height: 200px;
+      }
+      .content-2-3 {
+        display: flex;
+        flex-grow: 1;
+        align-items: stretch;
+        gap: 20px;
       }
       .conten1,
       .content2,
@@ -76,29 +93,23 @@
           #3edfd7 100%
         );
       }
-      .content-2-3 {
-        display: flex;
-        flex-grow: 1;
-        align-items: stretch;
-      }
+
       .button {
         position: fixed;
         bottom: 20px;
         right: 20px;
-        background-color: #25d366;
-        color: #fff;
-        width: 50px;
-        height: 50px;
+
+        background-color: white;
+        width: 39px;
+        height: 39px;
         border-radius: 50%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        
       }
       .button i {
-    font-size: 24px; /* Tamaño del ícono */
-}
-    
+        font-size: 48px;
+        color: green;
+        margin-top: -3px;
+        margin-left: -1px;
+      }
     </style>
   </head>
   <body>
@@ -113,12 +124,33 @@
             <div class="content2 item">Content 2</div>
             <div class="content3 item">Content 3</div>
           </div>
+          
         </div>
         <div class="button">
-            <i class="fa-brands fa-whatsapp"></i>
-          </div>
+          <i class="fa fa-whatsapp"></i>
+        </div>
       </div>
       <div class="footer item">Footer</div>
     </div>
+
+
+    <script>
+       
+        // 1. Seleccionar el Div a modificar
+        const mainDiv = document.querySelector(".mainContent");
+
+        // 2. Crear un HTMl
+        const fila = `
+         <div class="content-2-3">
+            <div class="content2 item">Content 2</div>
+            <div class="content3 item">Content 3</div>
+          </div>`;
+
+        // 3. Agregar la caja fila dentro de mainContent
+        mainDiv.innerHTML += fila;
+        mainDiv.innerHTML += fila;
+        mainDiv.innerHTML += fila;
+
+    </script>
   </body>
 </html>

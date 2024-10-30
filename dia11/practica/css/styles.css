@@ -1,0 +1,72 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Courier New", Courier, monospace;
+}
+
+.container {
+    background-color: aqua;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column-reverse;
+    height: 100vh;
+
+}
+
+.title {
+    display: flex;
+}
+
+
+.title-tablet {
+    display: none;
+}
+
+.title-desktop {
+    display: none;
+}
+
+@media screen and (min-width: 650px) {
+    .container {
+        background-color: green;
+        flex-direction: column;
+    }
+
+    .container h2 {
+        color: white;
+        initial-value: "Tablet";
+    }
+
+    .title-mobile {
+        display: none;
+    }
+
+    .title-tablet {
+        display: flex;
+    }
+
+    .title-desktop {
+        display: none;
+    }
+
+}
+
+@media screen and (min-width: 1024px) {
+    .container {
+        background-color: lightcoral;
+    }
+
+    .title-mobile {
+        display: none;
+    }
+
+    .title-tablet {
+        display: none;
+    }
+
+    .title-desktop {
+        display: flex;
+    }
+}

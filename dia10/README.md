@@ -13,3 +13,5 @@ Para obtener el primer hijo con css hacemos esto
             top: 20px;
         }
 ```
+
+Es obligatorio para el sticky colocar top si se desea que sea desde arriba o left si es desde la izquierda.

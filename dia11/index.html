@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Apuntes dia 11</title>
+    <meta
+      name="description"
+      content="Esto es una página web creada en clase para comprender css y html"
+    />
+    <meta name="author" content="Liz Claudia Espinosa Gutierrez" />
+    <meta name="keywords" content="CEI, Diseño Web, CSS, HTML, JS" />
+   <!-- <link rel="stylesheet" href="./css/ej-simplre.css">
+
+   <link rel="stylesheet" media="(min-width 768px)" href="./css/mobile.css">
+    
+    <link rel="stylesheet" media="(min-width:1024px)" href="./css/desktop.css"> -->
+   <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Courier New", Courier, monospace;
+      }
+      body {
+        background-color: aqua;
+        color: lightcoral;
+      }
+
+      @media screen and (min-width: 600px) {
+        body {
+          background-color: lightcoral;
+          color: aqua;
+        }
+      }
+
+      @media screen and (min-width: 600px) and (max-width: 800px) {
+        body {
+          color: red;
+        }
+      }
+      @media screen and (orientation: landscape) {
+          body {
+            color: green;
+          }
+        }
+        @media screen and (prefers-color-scheme: dark) {
+    body{
+        background-color:black;
+        color:white
+    }
+}
+    </style>
+  </head>
+  <body>
+    <h1>Soy un texto</h1>
+    <p>Soy un parrafo</p>
+<picture>
+<source media="(min-width:1024px)" srcset="./img/descktop.jpeg">
+<source media="(min-width:650px) " srcset="./img/tablet.jpeg">
+<img src="./img/movil.jpeg" alt="">
+</picture>
+  </body>
+</html>
