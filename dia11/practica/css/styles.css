@@ -10,15 +10,13 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: column-reverse;
+    flex-direction: column;
     height: 100vh;
 
 }
-
-.title {
-    display: flex;
+.title-mobile{
+    display:block;
 }
-
 
 .title-tablet {
     display: none;
@@ -27,19 +25,17 @@
 .title-desktop {
     display: none;
 }
-
-@media screen and (min-width: 650px) {
+/* Media query para Tablet */
+@media screen and (min-width: 650px) and (max-width: 1023px) {
     .container {
-        background-color: green;
-        flex-direction: column;
+        background-color: green;   
     }
 
-    .container h2 {
+    .title {
         color: white;
-        initial-value: "Tablet";
     }
 
-    .title-mobile {
+    .title-mobile, .title-desktop {
         display: none;
     }
 
@@ -47,22 +43,17 @@
         display: flex;
     }
 
-    .title-desktop {
-        display: none;
-    }
-
 }
+
+/* Media query para Desktop */
 
 @media screen and (min-width: 1024px) {
     .container {
         background-color: lightcoral;
+        flex-direction: column-reverse;
     }
 
-    .title-mobile {
-        display: none;
-    }
-
-    .title-tablet {
+    .title-mobile, .title-tablet {
         display: none;
     }
 
