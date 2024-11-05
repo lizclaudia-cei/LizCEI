@@ -1,0 +1,5 @@
+/* Ejemplo 2 */
+/* 1 0 0  Ganador*/
+#myElement { color: green; }
+/* 0 4 0 */
+.bodyClass .sectionClass .parentClass[id="myElement"] { color: yellow; }

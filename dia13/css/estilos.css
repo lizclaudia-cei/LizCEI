@@ -1,0 +1,8 @@
+
+/* Ejemplo 4 */
+/* 0 1 1 */
+input.myClass { color: yellow; }
+/* 0 1 1 */
+:root input { color: green; }
+/* 0 1 1 */
+input[type="checkbox"] { color: orange; }

@@ -71,7 +71,7 @@ Propiedades:
 </aside>
 ``` 
 
-- Section: Define una sección de una página donde se agrupa los contendios relacionados entre si. 
+- Section: Define una sección de una página donde se agrupa los contendios relacionados entre si.Puede haber un section dentro de otro section. 
    
    Propiedades:
      - Una web se compone de multiples secciones, y cada una con su propio contenido y proposito.

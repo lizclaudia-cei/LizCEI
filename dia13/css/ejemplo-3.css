@@ -1,0 +1,5 @@
+/* Ejemplo 3 */
+/* 0 1 1  esta es la que aplica*/
+:root input { color: green; }
+/* 0 0 4 */
+html body main input { color: yellow; }

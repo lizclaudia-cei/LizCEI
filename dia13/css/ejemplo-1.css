@@ -1,0 +1,5 @@
+/* Ejemplo 1 */
+/* 1 0 0 */
+#myElement { color: yellow; }
+/* 1 1 0    - esta es la que se aplica*/ 
+#myElement .myBox { color: green; }
