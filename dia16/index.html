@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pagina de ejercicios apuntes 16</title>
+    <style>
+        .grid-container{
+            width: 90vw;
+            border:5px solid #2c3e50;
+            height: 500px;
+            /* Grid de 2f x 6c*/
+            display:grid;
+            grid-template-rows: 100px 100px 50px;
+            grid-template-columns: 100px 100px 100px 100px 100px 100px;
+            gap:10px;
+
+        }
+        .item {
+            background-color: #f1c40f;
+            border: 1px solid #2c3e50;
+            padding: 20px;
+            font-size: 30px;
+            text-align: center;
+            opacity: 0.5;
+            
+        }
+        .item-1{
+            grid-column-start:1;
+            grid-column-end:7;
+            grid-row-start:1;
+            grid-row-end:3;
+        }
+        .item-2{
+            background-color: red;
+            grid-column-start:4;
+            grid-column-end:6;
+            grid-row-start:2;
+            grid-row-end:4;
+            z-index: 1; /* Esta regla lo que hace es que superpone la vista sobre otro jeje*/
+        }
+        .item-3{
+            background-color: burlywood;
+            grid-column-start:1;
+            grid-column-end:7;
+            grid-row-start:3;
+            grid-row-end:4;
+        }
+    </style>
+</head>
+<body>
+    <div class="grid-container">
+        <div class="item item-1">1</div>
+        <div class="item item-2">2</div>
+        <div class="item item-3">3<div>
+    </div>
+</body>
+</html>
