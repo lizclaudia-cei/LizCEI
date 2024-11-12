@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Transitions - JavaScript</title>
+    <style>
+      .acordeon {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+      }
+
+      .acordeon__item.open .acordeon__content {
+        max-height: 300px;
+      }
+
+      .acordeon__content {
+        max-height: 0;
+        overflow: hidden;
+        border: 1px solid lightskyblue;
+        transition: max-height 0.5s ease;
+      }
+
+      body.dark-mode {
+        background-color: black;
+        color: white;
+      }
+      body{
+        background-color: white;
+        color: black;
+        transition: color 0.5s ease, background-color 0.5s ease;
+
+    }
+
+    /* Transicion para notificacion*/
+    .notificacion{
+      opacity: 0;
+      transform: translateY(-20px);
+      transition: transform 0.4s ease-in, opacity 0.4s ease-in;
+    }
+    .notificacion.show{
+      opacity: 1;
+      transform: translateY(0);
+    }
+    </style>
+  </head>
+  <body>
+    <h2>Acordeón</h2>
+    <div class="acordeon">
+      <div class="acordeon__item">
+        <h3>Pregunta 1</h3>
+        <div class="acordeon__content">
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Necessitatibus sequi, molestias rem consequatur dicta mollitia
+            aspernatur magnam tempora laudantium ut fugit nostrum, hic atque
+            molestiae, pariatur minus nam aut recusandae.
+          </p>
+        </div>
+      </div>
+      <div class="acordeon__item open">
+        <h3>Pregunta 2</h3>
+        <div class="acordeon__content">
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Necessitatibus sequi, molestias rem consequatur dicta mollitia
+            aspernatur magnam tempora laudantium ut fugit nostrum, hic atque
+            molestiae, pariatur minus nam aut recusandae.
+          </p>
+        </div>
+      </div>
+      <div class="acordeon__item">
+        <h3>Pregunta 3</h3>
+        <div class="acordeon__content">
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Necessitatibus sequi, molestias rem consequatur dicta mollitia
+            aspernatur magnam tempora laudantium ut fugit nostrum, hic atque
+            molestiae, pariatur minus nam aut recusandae.
+          </p>
+        </div>
+      </div>
+      <div class="acordeon__item">
+        <h3>Pregunta 4</h3>
+        <div class="acordeon__content">
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Necessitatibus sequi, molestias rem consequatur dicta mollitia
+            aspernatur magnam tempora laudantium ut fugit nostrum, hic atque
+            molestiae, pariatur minus nam aut recusandae.
+          </p>
+        </div>
+      </div>
+      <div class="acordeon__item">
+        <h3>Pregunta 5</h3>
+        <div class="acordeon__content">
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Necessitatibus sequi, molestias rem consequatur dicta mollitia
+            aspernatur magnam tempora laudantium ut fugit nostrum, hic atque
+            molestiae, pariatur minus nam aut recusandae.
+          </p>
+        </div>
+      </div>
+      <div class="acordeon__item">
+        <h3>Pregunta 6</h3>
+        <div class="acordeon__content">
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Necessitatibus sequi, molestias rem consequatur dicta mollitia
+            aspernatur magnam tempora laudantium ut fugit nostrum, hic atque
+            molestiae, pariatur minus nam aut recusandae.
+          </p>
+        </div>
+      </div>
+
+      <button id="btn-dark">Prender / Apagar la luz</button>
+
+      
+    </div>
+
+    <h2>Notificaciones</h2>
+      <div class="notificacion">Hola soy una notificacion!</div>
+      <button id="btn-notificacion">Mostrar notificación</button>
+    <script>
+      //   Codigo Java Script para acordeon
+      // Seleccionar todos los items con la clase "acordeon__item"
+      const acordeonItems = document.querySelectorAll(".acordeon__item");
+
+      //Recorrer cada item de la lista
+      acordeonItems.forEach((item) => {
+        // Agregar un evento click a cada item
+        item.addEventListener("click", () => {
+          //Recorre la lista de items y remueve la clase "open" del item que la tenga
+          acordeonItems.forEach((item) => item.classList.remove("open"));
+          // Agrega la clase "open" al item que se le dio click
+          item.classList.add("open");
+        });
+      });
+
+      // Codigo de Js para agregar o quitar clases
+
+     /*  La función recibre 3 parametros
+        1. Selector ID un botón con querySelector
+        2. Selector de Target/ destino / objetivo
+        3. Nombre de la clase que se va a agregar o quitar */
+      function cambiarClases(buttonSelector, targetSelector, className) {
+        const buttons = document.querySelectorAll(buttonSelector);
+        const targets = document.querySelectorAll(targetSelector);
+
+        buttons.forEach((button) => {
+          button.addEventListener("click", () => {
+            targets.forEach((target) => {
+              target.classList.toggle(className);
+            });
+          });
+        });
+      }
+       cambiarClases("#btn-dark","body","dark-mode");
+
+       cambiarClases("#btn-notificacion",".notificacion","show");
+    </script>
+  </body>
+</html>

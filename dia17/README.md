@@ -53,3 +53,12 @@ Timing functions
 - ease-out: rapida - lento
 - ease-in-out: lenta - rapida - lenta (más brusca)
 - cubic-zeier: Timing personalizado
+
+## Cubic-Bezier
+Es una función que me permite crear una curva de velocidad personalizada.
+```css
+div{
+transition-timing-function: cubic-bezier(.44,.01,1,1)
+}
+
+```
