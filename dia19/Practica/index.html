@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Práctica Diseño Web - Web Party de DW</title>
+    <link rel="stylesheet" href="./css/styles.css" />
+  </head>
+  <body class="body">
+    <header class="header">
+      <p class="header__title">Web Party de DW</p>
+      <button class="header__button" id="btn-switch-mode">
+        Cambia el modo
+      </button>
+    </header>
+
+    <main class="main">
+      <section class="hero">
+        <h2 class="hero__title">WEB Party DW!</h2>
+        <img
+          class="hero__img"
+          src="./img/fiesta.jpeg"
+          alt="Imagen de Web Party WD"
+        />
+      </section>
+      <section class="container">
+        <div class="container__box">
+          <p class="container__p">Hazme click!</p>
+        </div>
+      </section>
+      <section class="gallery">
+        <img
+          class="gallery__img"
+          src="https://placehold.co/600x400?text=imagen1"
+          alt="Imagen 1"
+        />
+        <img
+          class="gallery__img"
+          src="https://placehold.co/600x400?text=imagen2"
+          alt="Imagen 2"
+        />
+        <img
+          class="gallery__img"
+          src="https://placehold.co/600x400?text=imagen3"
+          alt="Imagen 3"
+        />
+        <img
+          class="gallery__img"
+          src="https://placehold.co/600x400?text=imagen4"
+          alt="Imagen 4"
+        />
+        <img
+          class="gallery__img"
+          src="https://placehold.co/600x400?text=imagen5"
+          alt="Imagen 5"
+        />
+        <img
+          class="gallery__img"
+          src="https://placehold.co/600x400?text=imagen6"
+          alt="Imagen 6"
+        />
+        <img
+          class="gallery__img"
+          src="https://placehold.co/600x400?text=imagen7"
+          alt="Imagen 7"
+        />
+        <img
+          class="gallery__img"
+          src="https://placehold.co/600x400?text=imagen8"
+          alt="Imagen 8"
+        />
+      </section>
+    </main>
+
+    <sidebar class="sidebar">
+      <h3 class="sidebar__title">Acordeon</h3>
+      <div class="acordeon">
+        <div class="acordeon__item">
+          <h3>Fiesta</h3>
+          <div class="acordeon__content">
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Necessitatibus sequi, molestias rem consequatur dicta mollitia
+              aspernatur magnam tempora laudantium ut fugit nostrum, hic atque
+              molestiae, pariatur minus nam aut recusandae.
+            </p>
+          </div>
+        </div>
+        <div class="acordeon__item open">
+          <h3>Diseño Web</h3>
+          <div class="acordeon__content">
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Necessitatibus sequi, molestias rem consequatur dicta mollitia
+              aspernatur magnam tempora laudantium ut fugit nostrum, hic atque
+              molestiae, pariatur minus nam aut recusandae.
+            </p>
+          </div>
+        </div>
+        <div class="acordeon__item">
+          <h3>HTML</h3>
+          <div class="acordeon__content">
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Necessitatibus sequi, molestias rem consequatur dicta mollitia
+              aspernatur magnam tempora laudantium ut fugit nostrum, hic atque
+              molestiae, pariatur minus nam aut recusandae.
+            </p>
+          </div>
+        </div>
+      </div>
+    </sidebar>
+
+    <footer class="footer">
+      <h3 class="footer__title">Footer</h3>
+    </footer>
+
+    <script>
+      const box = document.querySelector(".container__box");
+      const box__p = document.querySelector(".container__p");
+
+      box.addEventListener("click", () => {
+        box.classList.toggle("container__box--active");
+        if (box.classList.contains("container__box--active")) {
+          box__p.textContent = "Me han activado!";
+        } else {
+          box__p.textContent = "Hazme click!";
+        }
+      });
+
+      const btn_mode = document.getElementById("btn-switch-mode");
+      const body = document.querySelector(".body");
+      btn_mode.addEventListener("click", () => {
+        body.classList.toggle("body--dark-mode");
+
+        if (body.classList.contains("body--dark-mode")) {
+          console.log(document.querySelector(".sidebar"));
+          document.querySelector(".header").classList.add("header--dark-mode");
+          document
+            .querySelector(".sidebar")
+            .classList.add("sidebar--dark-mode");
+          document.querySelector(".footer").classList.add("footer--dark-mode");
+        } else {
+          document
+            .querySelector(".header")
+            .classList.remove("header--dark-mode");
+          document
+            .querySelector(".sidebar")
+            .classList.remove("sidebar--dark-mode");
+          document
+            .querySelector(".footer")
+            .classList.remove("footer--dark-mode");
+        }
+      });
+
+      const acordeonItems = document.querySelectorAll(".acordeon__item");
+
+
+      acordeonItems.forEach((item) => {
+        item.addEventListener("click", () => {
+          acordeonItems.forEach((item) => item.classList.remove("open"));
+          item.classList.add("open");
+        });
+      });
+    </script>
+  </body>
+</html>

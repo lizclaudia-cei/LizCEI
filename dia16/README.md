@@ -141,3 +141,42 @@ Ejemplo:
 }
 
 ```
+
+## Grid Template Areas
+Podemos nombrar las celdas utilizando grid-template-areas.
+
+```css
+/* Conatiner de 3x4*/
+.container{
+    display: grid;
+    /*Esto importaria si deseo agregar el tamaño de lo contrario no son necesarias*/
+    grid-template-columns:repeat(3,1fr);
+    grid-template-rows:repeat(4,100px);
+    grid-gap:10px;
+
+/*cuando se desea dejar un espacio en blanco se coloca . */
+/*Los formatos en diagonal o en L no se pueden hacer */
+    grid-template-areas:
+            "sector1 sector1 sector2"
+            "sector3 .       sector2"
+            "sector4 sector5 sector5"
+            "sector4 sector5 sector5";
+}
+
+.caja-1{
+    grid-area:sector1;
+}
+.caja-2{
+    grid-area:sector2;
+}
+.caja-3{
+    grid-area:sector3;
+}
+.caja-4{
+    grid-area:sector4;
+}
+.caja-5{
+    grid-area:sector5;
+}
+
+```
