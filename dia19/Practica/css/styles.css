@@ -34,7 +34,27 @@
 }
 
 
+.header__button{
 
+    border: 2px solid black;
+    margin: 10px;
+    border-radius: 255px 15px 225px 15px / 15px 225px 15px 225px;
+
+    padding: 10px;
+    background-color: aquamarine;
+    color: black;
+    opacity: 0.5;
+    transition: opacity 1s ease;
+}
+
+.header__button:hover {
+    opacity: 1;    
+}
+.header__button--dark-mode{
+    background-color: blue;
+    border: 2px solid white;
+    color: white;
+}
 
 
 .main {
@@ -60,7 +80,7 @@
 .hero__img {
     object-fit: cover;
     width: 100%;
-
+    filter: drop-shadow(5px 5px 10px rgba(52, 168, 222, 0.8));
 
 }
 
@@ -71,11 +91,16 @@
 }
 
 .container__box {
-    border-radius: 10px;
+
+    border: 2px solid black;
+    margin: 10px;
+    border-radius: 255px 15px 225px 15px / 15px 225px 15px 225px;
+
     padding: 10px;
     background-color: aquamarine;
     color: black;
     transition: transform 1s ease;
+
 }
 .container__box--active{
 color:white;

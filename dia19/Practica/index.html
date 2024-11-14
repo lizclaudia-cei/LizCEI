@@ -79,21 +79,21 @@
           <h3>Fiesta</h3>
           <div class="acordeon__content">
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Necessitatibus sequi, molestias rem consequatur dicta mollitia
-              aspernatur magnam tempora laudantium ut fugit nostrum, hic atque
-              molestiae, pariatur minus nam aut recusandae.
+              ¡La noche es joven y la fiesta nos llama! 🌟 Música, risas y buena
+              vibra nos esperan para crear recuerdos inolvidables. 🕺💃 ¡A
+              disfrutar cada momento y dejar que el ritmo nos lleve! 🎉🎶
             </p>
           </div>
         </div>
-        <div class="acordeon__item open">
+        <div class="acordeon__item">
           <h3>Diseño Web</h3>
           <div class="acordeon__content">
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Necessitatibus sequi, molestias rem consequatur dicta mollitia
-              aspernatur magnam tempora laudantium ut fugit nostrum, hic atque
-              molestiae, pariatur minus nam aut recusandae.
+              El diseño web es el arte de transformar ideas en experiencias
+              digitales impactantes. 🎨✨ Combina creatividad, funcionalidad y
+              tecnología para construir interfaces atractivas, intuitivas y
+              adaptables a cualquier dispositivo. 🌐 ¡El límite es tu
+              imaginación!
             </p>
           </div>
         </div>
@@ -101,10 +101,10 @@
           <h3>HTML</h3>
           <div class="acordeon__content">
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Necessitatibus sequi, molestias rem consequatur dicta mollitia
-              aspernatur magnam tempora laudantium ut fugit nostrum, hic atque
-              molestiae, pariatur minus nam aut recusandae.
+              HTML es el lenguaje que da estructura y vida a las páginas web.
+              🖥️📄 Con etiquetas simples y poderosas, crea títulos, párrafos,
+              imágenes y enlaces que forman la base de cualquier sitio en
+              Internet. 🌟 ¡Es el primer paso para dar forma a tus ideas online!
             </p>
           </div>
         </div>
@@ -140,6 +140,7 @@
             .querySelector(".sidebar")
             .classList.add("sidebar--dark-mode");
           document.querySelector(".footer").classList.add("footer--dark-mode");
+          btn_mode.classList.add("header__button--dark-mode");
         } else {
           document
             .querySelector(".header")
@@ -150,11 +151,12 @@
           document
             .querySelector(".footer")
             .classList.remove("footer--dark-mode");
+          btn_mode.classList.remove("header__button--dark-mode");
+          ;
         }
       });
 
       const acordeonItems = document.querySelectorAll(".acordeon__item");
-
 
       acordeonItems.forEach((item) => {
         item.addEventListener("click", () => {
