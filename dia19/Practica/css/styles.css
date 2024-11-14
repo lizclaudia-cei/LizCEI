@@ -120,6 +120,12 @@ background-color: green;
 .gallery__img{
     width: 100%;
     object-fit: cover;
+    transition:transform 0.5s ease;
+}
+
+.gallery__img:hover{
+    transform: scale(1) rotate(45deg);
+    
 }
 
 .sidebar{
