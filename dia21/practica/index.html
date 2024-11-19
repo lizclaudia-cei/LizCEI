@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Apuntes 21</title>
+
+    <!-- Importart fuentes  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bungee+Spice&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Importar iconos -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
+
+    <!-- Importar nuestros estilos -->
+    <link rel="stylesheet" href="./css/styles.css" />
+    <link rel="stylesheet" href="./css/controllers.css" />
+    <link rel="stylesheet" href="./css/layout.css" />
+
+
+
+  </head>
+
+  <body class="Body u-bgPrimary">
+    
+    <header class="Header u-bgPrimary u-bxShadow">
+      <h1 class="u-txtCrotah u-txtPrimary">RRSS</h1>
+    </header>
+
+    <main class="Main u-bgSecondary">
+
+      <article class="Icons">
+
+        <div class="IconBox u-bgPrimary IconBox--fb">
+          <a href="" class="IconBox-link">
+            <div class="IconBox-layers">
+              <span class="IconBox-span"></span>
+              <span class="IconBox-span"></span>
+              <span class="IconBox-span"></span>
+              <span class="IconBox-span"></span>
+              <span class="IconBox-span fab fa-facebook-f"></span>
+            </div>
+            <div class="IconBox-text">Facebook</div></a
+          >
+        </div>
+
+        <div class="IconBox u-bgPrimary IconBox--x">
+          <a href="" class="IconBox-link">
+            <div class="IconBox-layers">
+              <span class="IconBox-span"></span>
+              <span class="IconBox-span"></span>
+              <span class="IconBox-span"></span>
+              <span class="IconBox-span"></span>
+              <span class="IconBox-span fa-brands fa-x-twitter"></span>
+            </div>
+            <div class="IconBox-text">TweetX</div></a
+          >
+        </div>
+
+        <div class="IconBox u-bgPrimary IconBox--insta">
+          <a href="" class="IconBox-link">
+            <div class="IconBox-layers">
+              <span class="IconBox-span"></span>
+              <span class="IconBox-span"></span>
+              <span class="IconBox-span"></span>
+              <span class="IconBox-span"></span>
+              <span class="IconBox-span fab fa-instagram"></span>
+            </div>
+            <div class="IconBox-text">Instagram</div>
+          </a>
+        </div>
+
+        <div class="IconBox u-bgPrimary IconBox--lkdin">
+          <a href="" class="IconBox-link">
+            <div class="IconBox-layers">
+              <span class="IconBox-span"></span>
+              <span class="IconBox-span"></span>
+              <span class="IconBox-span"></span>
+              <span class="IconBox-span"></span>
+              <span class="IconBox-span fab fa-linkedin-in"></span>
+            </div>
+            <div class="IconBox-text">Linkedin</div>
+          </a>
+        </div>
+
+        <div class="IconBox u-bgPrimary IconBox--yt">
+          <a href="" class="IconBox-link"
+            ><div class="IconBox-layers">
+              <span class="IconBox-span"></span
+              ><span class="IconBox-span"></span
+              ><span class="IconBox-span"></span
+              ><span class="IconBox-span"></span
+              ><span class="IconBox-span fab fa-youtube"></span>
+            </div>
+            <div class="IconBox-text">Youtube</div></a
+          >
+        </div>
+
+        <div class="IconBox u-bgPrimary IconBox--lion">
+          <a href="" class="IconBox-link"
+            ><div class="IconBox-layers">
+              <span class="IconBox-span"></span
+              ><span class="IconBox-span"></span
+              ><span class="IconBox-span"></span
+              ><span class="IconBox-span"></span
+              ><span class="IconBox-span">L</span>
+            </div>
+            <div class="IconBox-text">Rey Leon</div></a
+          >
+        </div>
+
+      </article>
+
+    </main>
+
+    <div class="Controllers">
+
+      <button id="btnDirection" class="Btn">Columnas</button>
+
+      <button id="btnDarkLight" class="Btn Btn--icon">
+        <span class="material-symbols-outlined"> dark_mode </span>
+      </button>
+
+    </div>
+
+
+    <script>
+      // selecciona elementos
+      const btnDirection = document.querySelector('#btnDireccion');
+      const btnDarkLight = document.querySelector('#btnDarkLight');
+
+      const iconsContainer = document.querySelector('.Icons');
+      const body = document.querySelector('.Body');
+
+      //añdir eventos
+      btnDirection.addEventListener('click', () => {
+        iconsContainer.classList.toggle('.u-flexCol');
+      });
+
+    </script>
+  </body>
+</html>

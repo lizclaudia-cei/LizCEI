@@ -1,0 +1,43 @@
+/*
+Los formatos posible son : ttf: truetype, otf: opentype, woff:woff , woff2: woff2
+*/
+
+@font-face {
+    font-family:"Crotah" ;
+    src: url("../fonts/Crotahfreeversion-Italic.ttf") format("truetype");
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+
+.u-txtCrotah{
+    font-family: "Crotah";
+}
+
+.Body {
+    display: flex;
+   flex-direction:column;
+    
+    height: 100vh;
+}
+
+.Header {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 20px;
+    z-index: 2;
+
+}
+
+.Main {
+    display:flex;
+    flex-grow:1;
+    width:100%;
+    justify-content: center;
+    align-items: center;
+}
