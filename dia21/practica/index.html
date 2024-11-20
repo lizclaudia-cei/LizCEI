@@ -129,7 +129,7 @@
       <button id="btnDirection" class="Btn">Columnas</button>
 
       <button id="btnDarkLight" class="Btn Btn--icon">
-        <span class="material-symbols-outlined"> dark_mode </span>
+        <span class="material-symbols-outlined" id="iconSpan"> dark_mode </span>
       </button>
 
     </div>
@@ -139,6 +139,7 @@
       // selecciona elementos
       const btnDirection = document.querySelector('#btnDirection');
       const btnDarkLight = document.querySelector('#btnDarkLight');
+      const span = document.querySelector('#iconSpan');
 
       const iconsContainer = document.querySelector('.Icons');
       const body = document.querySelector('.Body');
@@ -151,7 +152,7 @@
 
       btnDarkLight.addEventListener('click',()=>{
         body.classList.toggle('u-Dark');
-         btnDarkLight.innerHTML=' <span class="material-symbols-outlined"> light_mode </span>';
+         span.textContent= body.classList.contains('u-Dark') ?' light_mode': ' dark_mode';
       })
 
      
