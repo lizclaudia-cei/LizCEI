@@ -42,7 +42,7 @@
 
       <article class="Icons">
 
-        <div class="IconBox u-bgPrimary IconBox--fb">
+        <div class="IconBox no_u-bgPrimary IconBox--fb">
           <a href="" class="IconBox-link">
             <div class="IconBox-layers">
               <span class="IconBox-span"></span>
@@ -55,7 +55,7 @@
           >
         </div>
 
-        <div class="IconBox u-bgPrimary IconBox--x">
+        <div class="IconBox no_u-bgPrimary IconBox--x">
           <a href="" class="IconBox-link">
             <div class="IconBox-layers">
               <span class="IconBox-span"></span>
@@ -68,7 +68,7 @@
           >
         </div>
 
-        <div class="IconBox u-bgPrimary IconBox--insta">
+        <div class="IconBox no_u-bgPrimary IconBox--insta">
           <a href="" class="IconBox-link">
             <div class="IconBox-layers">
               <span class="IconBox-span"></span>
@@ -81,7 +81,7 @@
           </a>
         </div>
 
-        <div class="IconBox u-bgPrimary IconBox--lkdin">
+        <div class="IconBox no_u-bgPrimary IconBox--lkdin">
           <a href="" class="IconBox-link">
             <div class="IconBox-layers">
               <span class="IconBox-span"></span>
@@ -94,7 +94,7 @@
           </a>
         </div>
 
-        <div class="IconBox u-bgPrimary IconBox--yt">
+        <div class="IconBox no_u-bgPrimary IconBox--yt">
           <a href="" class="IconBox-link"
             ><div class="IconBox-layers">
               <span class="IconBox-span"></span
@@ -107,7 +107,7 @@
           >
         </div>
 
-        <div class="IconBox u-bgPrimary IconBox--lion">
+        <div class="IconBox no_u-bgPrimary IconBox--lion">
           <a href="" class="IconBox-link"
             ><div class="IconBox-layers">
               <span class="IconBox-span"></span
@@ -136,15 +136,21 @@
 
 
     <script>
-      // selecciona elementos
+      // ----------------------------------
+      //       Declaramos variables
+      // ----------------------------------
       const btnDirection = document.querySelector('#btnDirection');
       const btnDarkLight = document.querySelector('#btnDarkLight');
+      
       const span = document.querySelector('#iconSpan');
-
       const iconsContainer = document.querySelector('.Icons');
       const body = document.querySelector('.Body');
 
-      //añdir eventos
+
+      //------------------------------------
+      //       Declaramos funciones
+      //------------------------------------
+
       btnDirection.addEventListener('click', () => {
         iconsContainer.classList.toggle('u-flexCol');
         btnDirection.textContent = iconsContainer.classList.contains('u-flexCol') ? 'Filas' : 'Columnas';
@@ -152,7 +158,11 @@
 
       btnDarkLight.addEventListener('click',()=>{
         body.classList.toggle('u-Dark');
-         span.textContent= body.classList.contains('u-Dark') ?' light_mode': ' dark_mode';
+        // Esto funcionaria igual que lo de arriba document.body.classList.toggle('u-Dark');
+
+         span.textContent = body.classList.contains('u-Dark') ?' light_mode': ' dark_mode';
+         // Esto funciona igual que lo de arriba pero sin tener que crear la variable span. 
+         //  btnDarkLight.querySelector('span').innertText='light_mode'
       })
 
      
