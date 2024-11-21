@@ -95,7 +95,7 @@ const PI= 3.141516;
 ```
 ## Comentarios en JS
 - Simple `//`
-- Simple en la misma línea `nombre=Sofia //soy comentario`
+- Simple en la misma línea `nombre=Sofia; //soy comentario`
 - Multiples líneas `/* ........*/`
 - Comentario de Documentación `/** .....*/` para bloques de documentación, este se usa para comentarios de funciones y clases.
 
@@ -164,10 +164,10 @@ console.log(listaCompras[0]);
 const alumno={
     nombre:"Luis",
     edad:25,
-    saludar:function(){console.log('Hola Mundo')}
+    saludar:function(name){console.log('Hola , mi nombre es ', name)}
 }
 
 alumno.edad = 26;
-
+alumnos.saludar("Liz");
 
 ```

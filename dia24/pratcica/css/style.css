@@ -1,0 +1,28 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+.Calculadora{
+    display: grid;
+    grid-template-areas: 
+    "Input Input Input Input"
+    "Button Button Button Button"
+    "Button Button Button Button"
+    "Button Button Button Button"
+    "Button-0      Button Button"
+    
+    ;
+}
+
+.Input{
+    grid-area: "Input";
+
+}
+.Button{
+    grid-area: "Button";
+}
+.Button-0{
+    grid-area: Button-0;
+}
