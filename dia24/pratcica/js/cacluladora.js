@@ -91,5 +91,10 @@ btnMult.addEventListener('click', () => {
 });
 btnclear.addEventListener('click', () => {
     resultado = limpiar(resultado);
+    if(false){
+        console.log('esto no se ejecuta');  
+    }else{
+        console.log('esto si se ejecuta');
+    }
     imprimirPantalla(resultado);
 });
