@@ -1,0 +1,91 @@
+/* Estilos globales */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  .Body {
+    font-family: 'Roboto', sans-serif;
+    background: linear-gradient(135deg, #f5f7fa, #c3cfe2);
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 1rem;
+  }
+  
+  .Main {
+    width: 100%;
+    max-width: 800px;
+    background: #fff;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .u-title {
+    font-size: 2rem;
+    color: #4a90e2;
+    margin-bottom: 1.5rem;
+    text-align: center;
+  }
+  
+  /* Lista de ejercicios */
+  .Main-content {
+    margin-bottom: 1.5rem;
+  }
+  
+  .u-text {
+    margin-bottom: 1rem;
+    line-height: 1.5;
+    color: #555;
+  }
+  
+  /* Input */
+  .u-input {
+    width: 100%;
+    padding: 0.8rem;
+    margin-bottom: 1.5rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+    outline: none;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+  }
+  
+  .u-input:focus {
+    border-color: #4a90e2;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Botones */
+  .Main-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+  }
+  
+  .button {
+    padding: 0.8rem 1.5rem;
+    border: none;
+    background: #4a90e2;
+    color: #fff;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+  }
+  
+  .button:hover {
+    background: #357abd;
+    transform: scale(1.05);
+  }
+  
+  .button:active {
+    transform: scale(0.95);
+  }
+  

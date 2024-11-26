@@ -4,33 +4,81 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Parctica JavaScript</title>
+    <link rel="stylesheet" href="./css/style.css">
   </head>
-  <body>
-
-
+  <body class="Body">
+    <main class="Main">
+      <h1 class="u-title">Practica JavaScript</h1>
+      <div class="Main-content">
+        <ol>
+          <li class="u-text">Convertir el texto "   HoLa Mundo " todo em mayúsculas y sin espcacios</li>
+          <li class="u-text">Del texto "Estoy aprendiendo Javascript y PHP" indicar si esta presente Javascript y si esta presente PHP.</li>
+          <li class="u-text">Separar el siguiente texto en una lista e impirmir el último valor "Lechuga, tomate,Peras,Manzanas".</li>
+          <li class="u-text">De cualquier frase que ingrese, agregar tilde a todas las vocales. Ej: "practicando javascript" => "práticándó jáváscrípt"</li>
+          <li class="u-text">Ver si estos 2 arrays son iguales ["Manzana", "Pera", "Uvas"] y ["manzana","pera","uvas"].</li>
+          <li class="u-text">Convertir el texto tOMi123!! en tomi123!</li>
+        </ol>
+      </div>
+      <div class="Main-result">
+        <input type="text" class="u-input" id="input"  placeholder="El resultado aparecerá aquí..."/>
+      </div>
+      <div class="Main-buttons">
+        <button id="btnChange" class="button">Convertir texto</button>
+        <button id="btnFind" class="button">Buscar texto</button>
+        <button id="btnSplit" class="button">Separar texto</button>
+        <button id="btnAcent" class="button">Agregar tildes</button>
+        <button id="btnCompare" class="button">Comparar arrays</button>
+        <button id="btnChangePasss" class="button">Convertir contraseña</button>
+      </div>
+    </main>
     <script>
+      //-------------------------------
+      //       Variables
+      //-------------------------------
+
+      const btnChange = document.getElementById("btnChange");
+      const btnFind = document.getElementById("btnFind");
+      const btnSplit = document.getElementById("btnSplit");
+      const btnAcent = document.getElementById("btnAcent");
+      const btnCompare = document.getElementById("btnCompare");
+      const btnChangePasss = document.getElementById("btnChangePasss");
+      const input = document.getElementById("input");
+      var result = "";
+
+      //-------------------------------
+      //       Eventos
+      //-------------------------------
+
       // Convertir el texto "   HoLa Mundo " todo em mayúsculas y sin espcacios
-      let texto = "   HoLa Mundo ";
-      console.log(texto.trim().toUpperCase());
+      btnChange.addEventListener("click", () => {
+        let texto = "   HoLa Mundo ";
+        result = texto.trim().toUpperCase();
+        input.value = result;
+        console.log(result);
+      });
 
       // Del texto "Estoy aprendiendo Javascript y PHP" indicar si esta presente Javascript y si esta presente PHP.
-      let texto2 = "Estoy aprendiendo Javascript y PHP";
-      console.log(
-        "Esta presente el texto Javascript: ",
-        texto2.includes("Javascript")
-      );
-      console.log("Esta presente el texto PHP: ", texto2.includes("PHP"));
+      btnFind.addEventListener("click", () => {
+        let texto2 = "Estoy aprendiendo Javascript y PHP";
+        result = texto2.includes("Javascript", "PHP") ? "El texto incluye ambas palabras" : "El texto no incluye ambas palabras";
+        input.value = result;
+        console.log(result);
+      });
 
       // Separar el siguiente texto en una lista e impirmir el último valor "Lechuga, tomate,Peras,Manzanas".
-      let texto3 = "Lechuga, tomate,Peras,Manzanas";
-      let lista = texto3.split(",");
-      console.log(lista[lista.length - 1]);
+      btnSplit.addEventListener("click", () => {
+        let texto3 = "Lechuga, tomate,Peras,Manzanas";
+        let lista = texto3.split(",");
+        result = lista[lista.length - 1];
+        input.value = result;
+        console.log(result);
+      });
 
       // De cualquier frase que ingrese, agregar tilde a todas las vocales. Ej: "practicando javascript" => "práticándó jáváscrípt"
 
-      let frase = "practicando javascript";
-      console.log(
-        frase.replace(/[aeiouAEIOU]/g, (vocal) => {
+      btnAcent.addEventListener("click", () => {
+        let frase = input.value;
+        result = frase.replace(/[aeiouAEIOU]/g, (vocal) => {
           const mapping = {
             a: "á",
             e: "é",
@@ -44,22 +92,30 @@
             U: "Ú",
           };
           return mapping[vocal];
-        })
-      );
-      
+        });
+        input.value = result;
+        console.log(result);
+      });
 
       // Ver si estos 2 arrays son iguales ["Manzana", "Pera", "Uvas"] y ["manzana","pera","uvas"].
+      btnCompare.addEventListener("click", () => {
         let array1 = ["Manzana", "Pera", "Uvas"];
-        let array2 = ["manzana","pera","uvas"];
-        console.log("Estos arrays son iguales: ", array1 == array2);
+        let array2 = ["manzana", "pera", "uvas"];
+        result = array1 === array2 ? "Son iguales" : "No son iguales";
+        input.value = result;
+        console.log(result);
+      });
 
       // Convertir el texto tOMi123!! en tomi123!
-      let texto4 = "tOMi123!!";
-      let nuevoTexto = texto4.slice(0,8);
-      let resultado =   nuevoTexto[1].toLowerCase()+ texto4[2].toLowerCase();
-      nuevoTexto = nuevoTexto.replace("OM", resultado);
-      
-      console.log(nuevoTexto, resultado);
+      btnChangePasss.addEventListener("click", () => {
+        let texto4 = "tOMi123!!";
+        let nuevoTexto = texto4.slice(0, 8);
+        let resultado = nuevoTexto[1].toLowerCase() + texto4[2].toLowerCase();
+        nuevoTexto = nuevoTexto.replace("OM", resultado);
+        result = nuevoTexto;
+        input.value = result;
+        console.log(result);
+      });
     </script>
   </body>
 </html>
