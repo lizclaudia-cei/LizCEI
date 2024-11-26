@@ -169,8 +169,62 @@ console.log(`El total con impuestos es: ${total + (total * iva)}`)
 
 3. Métodos de Strings
 
+Js nos ofrece una variedad de métodos para manipular cadenas de textos. Algunos ejemplos comunes son:
+
+- a.`toUpperCase()`y `toLowerCase()`: Colocar las letras a mayúsculas o todas minusculas
+- `split()`: divide una cadena en una lista/array basada en un separador. Devolviendo una lista.
+- `slices()`: Extrae una porcion de la cadena basada en indices de inicio y fin.Sin colocar el indice final.
+- `replace()`: reemplaza un parte de la cadena por otra (la primer ocurrencia).
+- `trim()`: Elimina los espacios en blanco al inicio o fin de la cadena.
+- `includes()`: Verifica si una cadena contiene una subcadena específica.
+- `startsWicth() endsWidth()`: Verifica si una cadena inicia o termina con una cadena especifica.
+- `repeat()`: Repite una cadena un número especifico de veces.
+
+
 ```js
-let nombre ="Luis"
-let apellido = "Estrada"
-let nombreCompleto = nombre + " " + apellido;
+let text = "Me encanta JavaScript";
+
+// UppeCase LowerCase
+console.log(text.toUpperCase());// ME ENCANTA JAVASCRIPT
+console.log(text.toLowerCase());// me encanta javascript
+
+//Split
+let palabras = text.split(" "); // ['Me','encanta','javaScript']
+
+//slice
+let frase = "Aprender javascript es divertido"
+console.log("Parte de frase: ", frase.slice([9,19]));//"javascript"
+console.log("Desde el inicio 9 al final: ", frase.slice(9));//"javascript es divertido"
+
+// replace
+let frase2 = "Hola mundo, hola universo";
+console.log("Reemplazar 'hola' por 'Hola' : ", frase2.replace('hola','Hola'));// Reemplazar 'hola' por 'Hola' : Hola mundo,Hola universo
+console.log("Remplazar todos los 'hola' por 'Hola': ", frase.replace(/hola/g,"Hola"));
+
+//trim
+let frase3 = "       Hola mi         nombre es       Luis      ";
+console.log(frase3.trim());// Hola mi         nombre es       Luis
+
+//include
+let frase4 = "El sol brilla en el cielo";
+console.log("Contiene sol?: " , frase4.include("sol"));// Contine sol?: true
+console.log("Conntiene luna?: ", frase4.include("luna"));// Contine luna?: false
+
+//startsWith endsWith
+let frase5 =  "JavaScript es genial";
+console.log("Empieza con Java?: " , frase5.startsWith("Java"));// Empieza con Java?:true
+console.log("Termina con genial?: ", frase5.endsWith('genial'))//Termina con genial?: true
+
+// repeat
+let risa = "Ja";
+console.log("Me causa mucha gracia: ", risa.repeat(3));// Me causa mucha gracia JaJaJa
+
+```
+Podemos combinar los métodos como en el ejemplo siguiente.
+```js
+let frase = "    No me gusta Javascript en diseño web     ";
+let resultado = frase.trim()// elimina espcios
+                     .toUpperCase()// convierte el texto a mayúsculas
+                     .replace('NO ME GUSTA', ' ME ENCANTA');// reemplaza el texto en mayúsculas porque el método anterior le hizo toUpperCase().
+console.log(resultado)// ME ENCANTA JAVASCRIPT EN DISEÑO WEB
 ```

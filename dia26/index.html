@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Parctica JavaScript</title>
+  </head>
+  <body>
+
+
+    <script>
+      // Convertir el texto "   HoLa Mundo " todo em mayúsculas y sin espcacios
+      let texto = "   HoLa Mundo ";
+      console.log(texto.trim().toUpperCase());
+
+      // Del texto "Estoy aprendiendo Javascript y PHP" indicar si esta presente Javascript y si esta presente PHP.
+      let texto2 = "Estoy aprendiendo Javascript y PHP";
+      console.log(
+        "Esta presente el texto Javascript: ",
+        texto2.includes("Javascript")
+      );
+      console.log("Esta presente el texto PHP: ", texto2.includes("PHP"));
+
+      // Separar el siguiente texto en una lista e impirmir el último valor "Lechuga, tomate,Peras,Manzanas".
+      let texto3 = "Lechuga, tomate,Peras,Manzanas";
+      let lista = texto3.split(",");
+      console.log(lista[lista.length - 1]);
+
+      // De cualquier frase que ingrese, agregar tilde a todas las vocales. Ej: "practicando javascript" => "práticándó jáváscrípt"
+
+      let frase = "practicando javascript";
+      console.log(
+        frase.replace(/[aeiouAEIOU]/g, (vocal) => {
+          const mapping = {
+            a: "á",
+            e: "é",
+            i: "í",
+            o: "ó",
+            u: "ú",
+            A: "Á",
+            E: "É",
+            I: "Í",
+            O: "Ó",
+            U: "Ú",
+          };
+          return mapping[vocal];
+        })
+      );
+      
+
+      // Ver si estos 2 arrays son iguales ["Manzana", "Pera", "Uvas"] y ["manzana","pera","uvas"].
+        let array1 = ["Manzana", "Pera", "Uvas"];
+        let array2 = ["manzana","pera","uvas"];
+        console.log("Estos arrays son iguales: ", array1 == array2);
+
+      // Convertir el texto tOMi123!! en tomi123!
+      let texto4 = "tOMi123!!";
+      let nuevoTexto = texto4.slice(0,8);
+      let resultado =   nuevoTexto[1].toLowerCase()+ texto4[2].toLowerCase();
+      nuevoTexto = nuevoTexto.replace("OM", resultado);
+      
+      console.log(nuevoTexto, resultado);
+    </script>
+  </body>
+</html>
