@@ -4,23 +4,42 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Parctica JavaScript</title>
-    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/style.css" />
   </head>
   <body class="Body">
     <main class="Main">
       <h1 class="u-title">Practica JavaScript</h1>
       <div class="Main-content">
         <ol>
-          <li class="u-text">Convertir el texto "   HoLa Mundo " todo em mayúsculas y sin espcacios</li>
-          <li class="u-text">Del texto "Estoy aprendiendo Javascript y PHP" indicar si esta presente Javascript y si esta presente PHP.</li>
-          <li class="u-text">Separar el siguiente texto en una lista e impirmir el último valor "Lechuga, tomate,Peras,Manzanas".</li>
-          <li class="u-text">De cualquier frase que ingrese, agregar tilde a todas las vocales. Ej: "practicando javascript" => "práticándó jáváscrípt"</li>
-          <li class="u-text">Ver si estos 2 arrays son iguales ["Manzana", "Pera", "Uvas"] y ["manzana","pera","uvas"].</li>
+          <li class="u-text">
+            Convertir el texto " HoLa Mundo " todo em mayúsculas y sin espcacios
+          </li>
+          <li class="u-text">
+            Del texto "Estoy aprendiendo Javascript y PHP" indicar si esta
+            presente Javascript y si esta presente PHP.
+          </li>
+          <li class="u-text">
+            Separar el siguiente texto en una lista e impirmir el último valor
+            "Lechuga, tomate,Peras,Manzanas".
+          </li>
+          <li class="u-text">
+            De cualquier frase que ingrese, agregar tilde a todas las vocales.
+            Ej: "practicando javascript" => "práticándó jáváscrípt"
+          </li>
+          <li class="u-text">
+            Ver si estos 2 arrays son iguales ["Manzana", "Pera", "Uvas"] y
+            ["manzana","pera","uvas"].
+          </li>
           <li class="u-text">Convertir el texto tOMi123!! en tomi123!</li>
         </ol>
       </div>
       <div class="Main-result">
-        <input type="text" class="u-input" id="input"  placeholder="El resultado aparecerá aquí..."/>
+        <input
+          type="text"
+          class="u-input"
+          id="input"
+          placeholder="El resultado aparecerá aquí..."
+        />
       </div>
       <div class="Main-buttons">
         <button id="btnChange" class="button">Convertir texto</button>
@@ -43,7 +62,7 @@
       const btnCompare = document.getElementById("btnCompare");
       const btnChangePasss = document.getElementById("btnChangePasss");
       const input = document.getElementById("input");
-      var result = "";
+      let result = "";
 
       //-------------------------------
       //       Eventos
@@ -59,17 +78,36 @@
 
       // Del texto "Estoy aprendiendo Javascript y PHP" indicar si esta presente Javascript y si esta presente PHP.
       btnFind.addEventListener("click", () => {
-        let texto2 = "Estoy aprendiendo Javascript y PHP";
-        result = texto2.includes("Javascript", "PHP") ? "El texto incluye ambas palabras" : "El texto no incluye ambas palabras";
+        const texto2 = "Estoy aprendiendo PHP y Javascript";
+        const java = texto2.includes("Javascript");
+        const php = texto2.includes("PHP");
+        // Utilizando if else
+        // if (java && php) {
+        //   result = "El texto incluye ambas palabras";
+        // } else {
+        //   if (java) {
+        //     result =
+        //       "El texto no incluye ambas palabras, solo incluye JavaScript";
+        //   } else {
+        //     if (php) {
+        //       result = "El texto no incluye ambas palabras, solo incluye PHP";
+        //     } else {
+        //       result = "El texto no incluye ninguna de las  palabras";
+        //     }
+        //   }
+        // }
+
+        result = ( java && php )? "El texto incluye ambas palabras" : `El texto no incluye ambas palabras ${java ? 'solo incluye JavaScript' : php ? 'solo incluye PHP' : ' ' }`;
         input.value = result;
         console.log(result);
       });
 
       // Separar el siguiente texto en una lista e impirmir el último valor "Lechuga, tomate,Peras,Manzanas".
       btnSplit.addEventListener("click", () => {
-        let texto3 = "Lechuga, tomate,Peras,Manzanas";
-        let lista = texto3.split(",");
-        result = lista[lista.length - 1];
+        let texto3 = "Lechuga, tomate, Peras, Manzanas";
+        let lista = texto3.split(", ");
+         result = lista[lista.length - 1];
+       // result = lista.pop(); //corta el ultimo elemento de la lista.  Pero tiene un bug y es que si la lista esta declarada dentro de una funcion cada que se entre a la funcion la lista se reinicia a ese valor 
         input.value = result;
         console.log(result);
       });
@@ -99,9 +137,37 @@
 
       // Ver si estos 2 arrays son iguales ["Manzana", "Pera", "Uvas"] y ["manzana","pera","uvas"].
       btnCompare.addEventListener("click", () => {
-        let array1 = ["Manzana", "Pera", "Uvas"];
-        let array2 = ["manzana", "pera", "uvas"];
-        result = array1 === array2 ? "Son iguales" : "No son iguales";
+        let elemento2 = 0;
+        const array1 = ["manzana", "pera", "uvas"];
+        const array2 = ["manzana", "pera", "uvas"];
+
+        for(i= 0; i<= array1.length; i++){
+          for(j= 0; j<=array2.length; j++){ 
+            if(j==i){
+            elemento2++;
+            }else{
+              console.log(" No son iguales");
+            }
+          }
+          if(elemento2 <= array1.length){
+            result = " No son iguales";
+          }
+        
+        }
+        console.log("Este es el result ",result);
+          // array1.forEach((element)=>{
+          //   array2.forEach((element)=> {elemnto2 = element});
+          //   if( element == elemento2){
+          //     result = 'Son iguales';
+          //   }
+           
+          //  console.log(result);
+          // })
+
+
+
+
+        // result = ? "Son iguales" : "No son iguales";
         input.value = result;
         console.log(result);
       });
