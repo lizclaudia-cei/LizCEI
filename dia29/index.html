@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cara o Cruz</title>
+  </head>
+  <body>
+    <h1>Cara o cruz</h1>
+    <button id="btnTirar">Tirar moneda</button>
+    <p>Cantidad de caras:<span id="cantCaras">0</span></p>
+    <p>Cantidad de cruces: <span id="cantCruces">0</span></p>
+    <p>Porcentaje de caras:<span id="porcentajeCara">0</span></p>
+
+    <script>
+      let cantCaras = 0;
+      let cantCruces = 0;
+      let porcentajeCara = 0;
+
+      const btnTirar = document.getElementById("btnTirar");
+      const cantCarasElement = document.getElementById("cantCaras");
+      const cantCrucesElement = document.getElementById("cantCruces");
+      const porcentajeCaraElement = document.getElementById("porcentajeCara");
+
+      function tirarMoneda() {
+        var numero = Math.random();
+        console.log(numero);
+        if (numero < 0.5) {
+          cantCaras++;
+          console.log("Cara");
+        } else {
+          console.log("Cruz");
+          cantCruces++;
+        }
+       porcentajeCara =  calcularPorcentaje(cantCaras, cantCruces);
+       imprimirPantalla();
+        
+      }
+
+      function calcularPorcentaje(num1, num2) {
+        const total = num1 + num2;
+        let result = (num1 / total) * 100;
+          result = Math.round(result) + '%';
+        return result;
+      }
+
+      function imprimirPantalla( ){
+        cantCarasElement.innerHTML = cantCaras;
+        cantCrucesElement.innerHTML = cantCruces;
+        porcentajeCaraElement.innerHTML = porcentajeCara;
+
+      }
+
+      btnTirar.addEventListener("click", () => {
+        tirarMoneda();
+      });
+    </script>
+  </body>
+</html>

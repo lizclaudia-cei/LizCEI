@@ -108,32 +108,9 @@ function diaSemana(dia) {
         return mapping[vocal];
       });
 
-    switch(dia) {
-        case "1":
-            dia = "lunes";
-            break;
-        case "2":
-            dia = "martes";
-            break;
-        case "3":
-            dia = "miercoles";
-            break;
-        case "4":
-            dia = "jueves";
-            break;
-        case "5":
-            dia = "viernes";
-            break;
-        case "6":
-            dia = "sabado";
-            break;
-        case "7":
-            dia = "domingo";
-            break;
-        default:
-            dia = "No es un dia de la semana"; 
-    }
-    if(diaM === "viernes"|| diaM == 5 || diaM == "sabado" || diaM == "domingo" || diaM == 6 || diaM == 7) {
+    
+    
+    if(diaM == "sabado" || diaM == "domingo" || diaM == 6 || diaM == 7) {
         resultado = `El día ingresado ${dia} es un día no laboral`;
     }else{
         resultado = `El día ingresado ${dia} es un día laboral`;
