@@ -30,6 +30,8 @@ const objScore={
     }
 }
 
+const opciones=['piedra','papel','tijera'];
+
 console.log("text body: ",document.body.innerText);
 
 //---------------------------------------------
@@ -66,7 +68,7 @@ function jugar(usuario){
 
     let resultado="";
 
-    if(jugadorAI == 'piedra' && usuario == 'piedra' || jugadorAI == 'papel' && usuario == 'papel' || jugadorAI == 'tijera' && usuario == 'tijera'){
+    if(jugadorAI == usuario){
         resultado='Empate';
     }else{
         if(jugadorAI == 'piedra' && usuario == 'papel' || jugadorAI == 'papel' && usuario == 'tijera' || jugadorAI == 'tijera' && usuario == 'piedra'){
@@ -110,25 +112,31 @@ function jugar(usuario){
 }
 
 /**
- * Funcion para que la AI elija con que objto desea jugar
+ * Funcion para elegir una opcion al azar
+ *  setea un numero random de la lista de opciones y llama a la funcion jugar con la opcion que este en el indice de la lista del numero seleccionado -- numero == 2 ? jugar(opciones[2])
  * @returns {string} - Devuelve piedra, papel o tijera
  */
  const elegirJugadorAI = ()=>{
-    const opciones=['piedra','papel','tijera'];
     const numero=Math.floor(Math.random()*opciones.length);
     return opciones[numero];
 }
 
 /**
  * Funcion para que la AI juegue contra la AI
+ * elije el valor al azar del jugador
+ * realiza una partida cada milesima de segundo
  */
 const  AIvsAI =()=>{
-    const opciones=['piedra','papel','tijera'];
-
+   
+/**
+ * Funcion para que se repita el juego cada determinado tiempo
+ * @param {function} // funcion 
+ * @param {number} // tiempo en el que realizara la funcion.
+ */
     setInterval(function(){
-        const numero=Math.floor(Math.random()*opciones.length);
-        const usuario=opciones[numero];
-        jugar(usuario);
+        const valor=elegirJugadorAI();
+       
+        jugar(valor);
     },100);
     // const numero=Math.floor(Math.random()*3);
     // usuario=opciones[numero];
@@ -136,7 +144,8 @@ const  AIvsAI =()=>{
 }
 
 /**
- * Funcion para graficar el score de las partidas
+ * Funcion para graficar el score de las partidas ganadas y perdidas
+ * Establece el porcentaje de cada una de ellas
  */
  const graficar= ()=>{
     const total=objScore.ganadas+objScore.perdidas;// +objScore.empatadas;
@@ -144,8 +153,8 @@ const  AIvsAI =()=>{
     const porcentajePerdidas=(objScore.perdidas/total)*100;
     //const porcentajeEmpatadas=(objScore.empatadas/total)*100;
 
-    const divGanadas=document.querySelector("div>div:nth-child(1)");
-    const divPerdidas=document.querySelector("div>div:nth-child(2)");
+    const divGanadas=document.getElementById("divGanadas");
+    const divPerdidas=document.getElementById("divPerdidas");
 
     divGanadas.innerHTML="Ganadas: "+Math.round(porcentajeGanadas)+"%";
     divPerdidas.innerHTML="Perdidas: "+Math.round(porcentajePerdidas)+"%";
