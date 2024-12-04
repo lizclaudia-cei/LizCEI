@@ -19,6 +19,8 @@ btnClick.addEventListener("click",()=>{
       let number = prompt("Ingresa un numero");
       number = Number(number);
     
+
+      // while(numero){ numero = parseInt(prompt("Ingresa un valor")) total+=numero;}
         while(number !== 0){
             if( !isNaN(number)){
             total  += number;
