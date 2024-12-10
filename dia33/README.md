@@ -22,3 +22,6 @@ const alumno = {
 console.log(alumno.saludar()); // Hola Juan
 ```
 
+Es mas adecuado utilizar el foreach en lugar del for cuando no se sabe cuantas veces se debe de ejecutar el bucle y se debe de verificar una condicion al inicio de cada ciclo.
+
+FTP: File Transfer Protocol
