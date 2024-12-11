@@ -44,7 +44,7 @@ console.log(frutas)//naranja,sandia,kiwi,arandano,pera,limon
 
 frutas.splice(0,1);// quitando el primer elemento
 frutas.splice(-1,1);// quitando el ultimo elemento
-frutas.splice(2,2);// quita dos elementos a partir del 2
+frutas.splice(2,2);// quita dos elementos a partir del indice 2
 frutas.splice(-1,0,"Mandarina","Papaya");// agrega al ultimo lugar los elementos sin eliminar nada
 
 

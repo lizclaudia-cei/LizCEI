@@ -17,7 +17,27 @@ const formTareas = document.getElementById('formTareas');
 const inputAddTask = document.getElementById('inputAddTask');
 const boxTasks = document.getElementById('boxTasks');
 
-const listaDeTareas = ['Ordenar el codigo JS', 'Crear las funciones', 'Probar el codigo'];
+const listaDeTareas = [
+    {
+        id: 1,
+        tittle: 'Ordenar el codigo JS',
+        isDone: true,
+
+    },
+    {
+        id: 2,
+        tittle: 'Crear las funciones',
+        isDone: false,
+
+    },
+    {
+        id: 3,
+        tittle: 'Probar el codigo',
+        isDone: false,
+
+    }
+];
+
 
 // -------------------------------
 // Funciones 
@@ -31,7 +51,12 @@ function showTasks() {
     boxTasks.innerHTML = ``;
 
     listaDeTareas.forEach((tarea) => {
-        boxTasks.innerHTML += `<li>${tarea}</li>`
+        boxTasks.innerHTML += `<li class="Main-li">
+                                   <input type="checkbox" id="${tarea.id}" ${tarea.isDone ? 'checked' : ''} ">
+                                   <label for="${tarea.id}">${tarea.tittle}</label>                                
+                                   <button onclick=deleteTask(${tarea.id}) class="Button">Eliminar</button>
+                                   <button onclick=doneTask(${tarea.id}) class="Button" id='btnDone'>Completar</button>
+                               </li>`
     });
 }
 
@@ -41,19 +66,43 @@ function showTasks() {
  * @param {String} tarea
  */
 function addTask() {
-    inputAddTask.value != null && inputAddTask.value.trim() != "" 
-        ? listaDeTareas.push(inputAddTask.value)
+    const tarea = {title:'',isDone:false,id:0}
+    inputAddTask.value != null && inputAddTask.value.trim() != ""
+        ? 
+        // tarea.title = inputAddTask.value;
+      
+        listaDeTareas.push(inputAddTask.value)
         : alert("Por favor ingresa una tarea válida");
     inputAddTask.value = ''
+    console.log(listaDeTareas);
     showTasks();
 }
+/**
+ * Función para completar una tarea  de la lista de tareas
+ * @param {number} id // el id del elemento 
+ */
+function doneTask(id) {
+    const tarea = listaDeTareas.find(tarea => tarea.id == id);
+    tarea.isDone = !tarea.isDone;
+    console.log(listaDeTareas);
+    showTasks();
+}
+/**
+ * Función para eliminar la tarea seleccionda
+ * @param {number} id // el id del elemento
+ */
+function deleteTask(id) {
+    const index = listaDeTareas.findIndex(tarea => tarea.id == id);
+    console.log(index);
+    listaDeTareas.splice(index, index);
+    console.log(listaDeTareas);
+    showTasks();
 
-
+}
 
 // -------------------------------
 // Eventos  
 //---------------------------------
-
 
 // escuchar el evento cuando se envia
 formTareas.addEventListener("submit", (event) => {
@@ -63,8 +112,9 @@ formTareas.addEventListener("submit", (event) => {
 
 });
 
-
 // -------------------------------
 // Iniciar nuestro programa  
 //---------------------------------
 showTasks();
+
+

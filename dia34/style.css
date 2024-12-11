@@ -1,0 +1,8 @@
+
+.Main-li{
+    display: flex;
+    gap: 5px;
+}
+.Button{
+    border: 1px solid gray;
+}
