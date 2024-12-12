@@ -70,16 +70,16 @@
         //------------------------------------
         listaBotones.forEach(boton => boton.addEventListener('click',()=>{
             listaPaginas.forEach((pagina)=>{
-                pagina.id == boton.dataset.tab ?  pagina.classList.add('u-visible'): pagina.classList.remove('u-visible');
+                pagina.id == boton.dataset.tab ? pagina.classList.add('u-visible') : pagina.classList.remove('u-visible');
             })
             listaBotones.forEach(boton => boton.classList.remove('u-active'));
             boton.classList.toggle('u-active');
         }))
 
         //------------------------------------
-        // Eventos
+        // Eventos e inicilaizacion 
         //------------------------------------
-
+        listaBotones[0].click();
     </script>
 </body>
 </html>
