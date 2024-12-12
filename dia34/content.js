@@ -52,12 +52,19 @@ function showTasks() {
 
     listaDeTareas.forEach((tarea) => {
         boxTasks.innerHTML += `<li class="Main-li">
+                                  <div class="Main-inputs">
                                    <input type="checkbox" id="${tarea.id}" ${tarea.isDone ? 'checked' : ''} ">
-                                   <label for="${tarea.id}">${tarea.tittle}</label>                                
-                                   <button onclick=deleteTask(${tarea.id}) class="Button">Eliminar</button>
+                                   <label for="${tarea.id}">${tarea.tittle}</label>  
+                                  </div>
+                                                                
+                                   <div class="Main-buttons">
+                                    <button onclick=deleteTask(${tarea.id}) class=" u-delet">X</button>
                                    <button onclick=doneTask(${tarea.id}) class="Button" id='btnDone'>Completar</button>
+                                   </div>
+                                  
                                </li>`
     });
+    console.log(listaDeTareas);
 }
 
 /**
@@ -66,15 +73,15 @@ function showTasks() {
  * @param {String} tarea
  */
 function addTask() {
-    const tarea = {title:'',isDone:false,id:0}
-    inputAddTask.value != null && inputAddTask.value.trim() != ""
-        ? 
-        // tarea.title = inputAddTask.value;
-      
-        listaDeTareas.push(inputAddTask.value)
-        : alert("Por favor ingresa una tarea válida");
+    const tarea = { id: 0 , tittle: '', isDone: false,}
+    if (!inputAddTask.value.includes('<') && inputAddTask.value.trim() != "") {
+        tarea.tittle = inputAddTask.value;
+        tarea.id =  listaDeTareas[listaDeTareas.length-1].id + 1;
+        listaDeTareas.push(tarea);
+    } else {
+        alert("Por favor ingresa una tarea válida");
+    }
     inputAddTask.value = ''
-    console.log(listaDeTareas);
     showTasks();
 }
 /**
@@ -84,7 +91,6 @@ function addTask() {
 function doneTask(id) {
     const tarea = listaDeTareas.find(tarea => tarea.id == id);
     tarea.isDone = !tarea.isDone;
-    console.log(listaDeTareas);
     showTasks();
 }
 /**
@@ -94,10 +100,9 @@ function doneTask(id) {
 function deleteTask(id) {
     const index = listaDeTareas.findIndex(tarea => tarea.id == id);
     console.log(index);
-    listaDeTareas.splice(index, index);
-    console.log(listaDeTareas);
+    listaDeTareas.splice(index, 1);
     showTasks();
-
+// listaDeTareas = listaDeTareas.filter(tarea => tarea.id != id); => Para que este sea viable listaDeTareas no puede ser const
 }
 
 // -------------------------------

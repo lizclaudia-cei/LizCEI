@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Acordeon</title>
+    <style>
+        .Acordeon{
+            border:1px solid #ccc;
+        }
+        .Acordeon-item{
+            padding: 5px;
+            border-bottom: 1px solid #ccc;
+        }
+        .Acordeon-header{
+            background-color: lightskyblue;
+        }
+        .Acordeon-content{
+            display: none;
+        }
+        .active .Acordeon-content{
+            display: block;
+        }
+        .active .Acordeon-header{
+            background-color: lightgreen;
+        }
+    </style>
+  </head>
+  <body>
+    <div class="Acordeon">
+      <div class="Acordeon-item">
+        <div class="Acordeon-header">Sección 1</div>
+        <div class="Acordeon-content">Contenido sección 1</div>
+      </div>
+      <div class="Acordeon-item">
+        <div class="Acordeon-header">Sección 2</div>
+        <div class="Acordeon-content">Contenido sección 2</div>
+      </div>
+      <div class="Acordeon-item">
+        <div class="Acordeon-header">Sección 3</div>
+        <div class="Acordeon-content">Contenido sección 3</div>
+      </div>
+    </div>
+
+    <script>
+        //-----------------------------------
+        // VAriables
+        //------------------------------------
+        const acordeonHeader = document.querySelectorAll('.Acordeon-header');
+        const acordeonItems = document.querySelectorAll('.Acordeon-item');
+
+        //-----------------------------------
+        // Funciones
+        //------------------------------------
+
+        acordeonHeader.forEach(header=>{
+            header.addEventListener('click',()=>{
+                const item = header.closest(".Acordeon-item");
+                acordeonItems.forEach(item => item.classList.remove('active'))
+                item.classList.toggle('active'); // con estos siempre va a dejar un acordeon abierto
+            })
+        })
+
+
+        //-----------------------------------
+        // Eventos
+        //------------------------------------
+        // hacer click en el primer elemento 
+        acordeonHeader[0].click();
+    </script>
+  </body>
+</html>

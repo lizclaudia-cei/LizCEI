@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabs</title>
+</head>
+<style>
+    .Tabs-contenido{
+        display:none;
+    }
+    .Tabs-buttons{
+        display:flex;
+        list-style: none;
+        cursor:pointer;
+    }
+    .Tabs-button{
+        padding: 10px;
+        background-color: #ddd;
+        border: 1px solid #ccc;
+    }
+    .u-active{
+        background-color: #fff;
+        border: 1px solid green;
+    }
+    .u-visible{
+        display: block;
+    }
+</style>
+<body>
+    <div class="Tabs">
+        <ul class="Tabs-buttons">
+            <li data-tab="pagina1" class="Tabs-button">Tab 1</li>
+
+            <li data-tab="pagina2" class="Tabs-button">Tab 2</li>
+
+            <li data-tab="pagina3" class="Tabs-button">Tab 3</li>
+        </ul>
+
+        <div class="Tabs-container">
+            <div id="pagina1" class="Tabs-contenido">
+                <h2>Página 1</h2>
+                <p>Contenido página 1</p>
+            </div>
+        </div>
+        <div class="Tabs-container">
+            <div id="pagina2" class="Tabs-contenido">
+                <h2>Página 2</h2>
+                <p>Contenido página 2</p>
+            </div>
+        </div>
+        <div class="Tabs-container">
+            <div id="pagina3" class="Tabs-contenido">
+                <h2>Página 3</h2>
+                <p>Contenido página 3</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        //------------------------------------
+        // Variables
+        //------------------------------------
+        const listaBotones = document.querySelectorAll(".Tabs-button");
+        const listaPaginas = document.querySelectorAll(".Tabs-contenido");
+
+
+        //------------------------------------
+        // Funciones
+        //------------------------------------
+        listaBotones.forEach(boton => boton.addEventListener('click',()=>{
+            listaPaginas.forEach((pagina)=>{
+                pagina.id == boton.dataset.tab ?  pagina.classList.add('u-visible'): pagina.classList.remove('u-visible');
+            })
+            listaBotones.forEach(boton => boton.classList.remove('u-active'));
+            boton.classList.toggle('u-active');
+        }))
+
+        //------------------------------------
+        // Eventos
+        //------------------------------------
+
+    </script>
+</body>
+</html>
