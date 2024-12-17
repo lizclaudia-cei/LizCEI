@@ -68,7 +68,7 @@ function actualizarContador() {
 /**
  * Función para agregar intervalo
  */
-function agregarIntervalo() {
+function  agregarIntervalo() {
     // la varible intervalo hara que se inice el intervalo de cambiar de imagenes por segundo.
     intervalos = setInterval(nextImage, 1000);
 }
@@ -93,6 +93,7 @@ actualizarContador();
 // Agrega el evento mouseover  a el slider image
 sliderImages.addEventListener('mouseover', () => {
     // frena el intervalo cuando el mouse este sobre el slider
+    // Elimina el timer
     clearInterval(intervalos);
 });
 // Agrega el evento mouseout a el slider 
