@@ -8,6 +8,8 @@ function traerUsuarios(){
         data => {
             users = data;
             console.log(users);
+            users = users.slice(0,5);
+            // volver a usar map en lugar de for 
             users.map(user => {
                 // Crear nuevos elementos para cada usuario
                 let h1 = document.createElement('h1');
@@ -15,7 +17,6 @@ function traerUsuarios(){
                 let pCity = document.createElement('p');
                 let pCompany = document.createElement('p');
                 let div = document.createElement('div');
-                let fragmento = document.createDocumentFragment();
 
                 h1.textContent = `${user.name}`;
                 p.innerHTML = `<strong>email:</strong> ${user.email}`;
@@ -24,12 +25,12 @@ function traerUsuarios(){
                 console.log(h1, p, pCity, pCompany);
                 h1.classList.add('Cards-title');
                 div.classList.add('Cards-card');
+                div.addEventListener('mouseover',()=> div.classList.add('isHover'));
                 div.appendChild(h1);
                 div.appendChild(p);
                 div.appendChild(pCity);
                 div.appendChild(pCompany);
-                fragmento.appendChild(div);
-                card.appendChild(fragmento);
+                card.appendChild(div);
             });
         }
     )
