@@ -134,3 +134,5 @@ async function traerPostDeUsaurios(){
 }
 traerPostDeUsaurios();
 ```
+
+Evento input oara agregar determinada funcionalidad cada que se modifique el valor del input.
